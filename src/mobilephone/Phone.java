@@ -38,13 +38,14 @@ public class Phone extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel4 = new javax.swing.JLabel();
         body = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         time = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
+        inicio_sesion = new javax.swing.JPanel();
         Logo_UCO = new javax.swing.JLabel();
         Bandera1 = new javax.swing.JLabel();
         Bandera2 = new javax.swing.JLabel();
@@ -55,7 +56,10 @@ public class Phone extends javax.swing.JFrame {
         Contraseña_campo = new javax.swing.JPasswordField();
         Mostrar_contraseña = new javax.swing.JCheckBox();
         Password_olvidada = new javax.swing.JLabel();
-        Alumno_boton = new javax.swing.JButton();
+        inicio_de_sesion = new javax.swing.JButton();
+        interfaz_alumno = new javax.swing.JPanel();
+
+        jLabel4.setText("jLabel4");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -107,48 +111,50 @@ public class Phone extends javax.swing.JFrame {
         Password_olvidada.setFont(new java.awt.Font("Ubuntu", 0, 10)); // NOI18N
         Password_olvidada.setText("Contraseña olvidada");
 
-        Alumno_boton.setText("Iniciar Sesión");
-        Alumno_boton.addActionListener(new java.awt.event.ActionListener() {
+        inicio_de_sesion.setText("Iniciar Sesión");
+        inicio_de_sesion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Alumno_botonActionPerformed(evt);
+                inicio_de_sesionActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(Bandera1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
-                .addComponent(Bandera2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
-                .addComponent(Bandera3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34))
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
+        javax.swing.GroupLayout inicio_sesionLayout = new javax.swing.GroupLayout(inicio_sesion);
+        inicio_sesion.setLayout(inicio_sesionLayout);
+        inicio_sesionLayout.setHorizontalGroup(
+            inicio_sesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(inicio_sesionLayout.createSequentialGroup()
+                .addGroup(inicio_sesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(inicio_sesionLayout.createSequentialGroup()
                         .addGap(112, 112, 112)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(inicio_sesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(Password_olvidada)
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(inicio_sesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(Usuario_campo)
                                 .addComponent(Usuario_etiqueta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(Contraseña_etiqueta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(Contraseña_campo)
                                 .addComponent(Mostrar_contraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(104, 104, 104)
-                        .addComponent(Logo_UCO, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(141, 141, 141)
-                        .addComponent(Alumno_boton, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(inicio_sesionLayout.createSequentialGroup()
+                        .addGap(117, 117, 117)
+                        .addComponent(Logo_UCO, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, inicio_sesionLayout.createSequentialGroup()
+                .addGroup(inicio_sesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(inicio_sesionLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(inicio_de_sesion, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(inicio_sesionLayout.createSequentialGroup()
+                        .addGap(22, 22, 22)
+                        .addComponent(Bandera1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                        .addComponent(Bandera2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(27, 27, 27)
+                .addComponent(Bandera3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        inicio_sesionLayout.setVerticalGroup(
+            inicio_sesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(inicio_sesionLayout.createSequentialGroup()
                 .addGap(83, 83, 83)
                 .addComponent(Logo_UCO)
                 .addGap(29, 29, 29)
@@ -164,13 +170,24 @@ public class Phone extends javax.swing.JFrame {
                 .addGap(12, 12, 12)
                 .addComponent(Mostrar_contraseña)
                 .addGap(33, 33, 33)
-                .addComponent(Alumno_boton, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 209, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(inicio_de_sesion, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 217, Short.MAX_VALUE)
+                .addGroup(inicio_sesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Bandera3)
                     .addComponent(Bandera1)
                     .addComponent(Bandera2))
                 .addGap(71, 71, 71))
+        );
+
+        javax.swing.GroupLayout interfaz_alumnoLayout = new javax.swing.GroupLayout(interfaz_alumno);
+        interfaz_alumno.setLayout(interfaz_alumnoLayout);
+        interfaz_alumnoLayout.setHorizontalGroup(
+            interfaz_alumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        interfaz_alumnoLayout.setVerticalGroup(
+            interfaz_alumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 830, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -186,8 +203,13 @@ public class Phone extends javax.swing.JFrame {
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(25, 25, 25))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(inicio_sesion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(interfaz_alumno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -197,8 +219,13 @@ public class Phone extends javax.swing.JFrame {
                     .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(inicio_sesion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(interfaz_alumno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         body.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 400, 860));
@@ -218,12 +245,18 @@ public class Phone extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void Alumno_botonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Alumno_botonActionPerformed
+    private void inicio_de_sesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inicio_de_sesionActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_Alumno_botonActionPerformed
+        inicio_sesion.setVisible(false);
+        interfaz_alumno.setVisible(true);
+    }//GEN-LAST:event_inicio_de_sesionActionPerformed
 
     private void Mostrar_contraseñaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Mostrar_contraseñaActionPerformed
         // TODO add your handling code here:
+        if(Mostrar_contraseña.isSelected())
+        Contraseña_campo.setEchoChar((char)0);
+        else
+        Contraseña_campo.setEchoChar('*');
     }//GEN-LAST:event_Mostrar_contraseñaActionPerformed
 
     private void Usuario_campoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Usuario_campoActionPerformed
@@ -267,7 +300,6 @@ public class Phone extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Alumno_boton;
     private javax.swing.JLabel Bandera1;
     private javax.swing.JLabel Bandera2;
     private javax.swing.JLabel Bandera3;
@@ -279,11 +311,14 @@ public class Phone extends javax.swing.JFrame {
     private javax.swing.JTextField Usuario_campo;
     private javax.swing.JLabel Usuario_etiqueta;
     private javax.swing.JPanel body;
+    private javax.swing.JButton inicio_de_sesion;
+    private javax.swing.JPanel inicio_sesion;
+    private javax.swing.JPanel interfaz_alumno;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel time;
     // End of variables declaration//GEN-END:variables
 }
