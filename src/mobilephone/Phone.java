@@ -60,6 +60,7 @@ public class Phone extends javax.swing.JFrame {
         Mostrar_contraseña = new javax.swing.JCheckBox();
         Password_olvidada = new javax.swing.JLabel();
         inicio_de_sesion = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
         interfaz_alumno = new javax.swing.JPanel();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
@@ -127,6 +128,7 @@ public class Phone extends javax.swing.JFrame {
         Bandera3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/bandera3.png"))); // NOI18N
         Bandera3.setText("jLabel2");
 
+        Usuario_campo.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         Usuario_campo.setText("Usuario1");
         Usuario_campo.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(0, 102, 255)));
         Usuario_campo.addActionListener(new java.awt.event.ActionListener() {
@@ -135,13 +137,17 @@ public class Phone extends javax.swing.JFrame {
             }
         });
 
+        Usuario_etiqueta.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         Usuario_etiqueta.setText("Usuario");
 
+        Contraseña_etiqueta.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         Contraseña_etiqueta.setText("Contraseña");
 
+        Contraseña_campo.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         Contraseña_campo.setText("Contraseña1");
         Contraseña_campo.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(0, 102, 255)));
 
+        Mostrar_contraseña.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         Mostrar_contraseña.setText("Mostrar contraseña");
         Mostrar_contraseña.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -149,9 +155,10 @@ public class Phone extends javax.swing.JFrame {
             }
         });
 
-        Password_olvidada.setFont(new java.awt.Font("Ubuntu", 0, 10)); // NOI18N
+        Password_olvidada.setFont(new java.awt.Font("SansSerif", 0, 10)); // NOI18N
         Password_olvidada.setText("Contraseña olvidada");
 
+        inicio_de_sesion.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         inicio_de_sesion.setText("Iniciar Sesión");
         inicio_de_sesion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -159,22 +166,25 @@ public class Phone extends javax.swing.JFrame {
             }
         });
 
+        jLabel6.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
+        jLabel6.setText("                 Selección de idioma:");
+
         javax.swing.GroupLayout inicio_sesionLayout = new javax.swing.GroupLayout(inicio_sesion);
         inicio_sesion.setLayout(inicio_sesionLayout);
         inicio_sesionLayout.setHorizontalGroup(
             inicio_sesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, inicio_sesionLayout.createSequentialGroup()
                 .addGroup(inicio_sesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(inicio_sesionLayout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(Bandera1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
-                        .addComponent(Bandera2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(20, 20, 20))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, inicio_sesionLayout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(inicio_de_sesion, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
+                        .addComponent(inicio_de_sesion, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, inicio_sesionLayout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(Bandera1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
+                        .addComponent(Bandera2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(17, 17, 17)))
+                .addGap(3, 3, 3)
                 .addComponent(Bandera3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20))
             .addGroup(inicio_sesionLayout.createSequentialGroup()
@@ -188,6 +198,10 @@ public class Phone extends javax.swing.JFrame {
                         .addComponent(Contraseña_etiqueta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(Contraseña_campo)
                         .addComponent(Mostrar_contraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, inicio_sesionLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         inicio_sesionLayout.setVerticalGroup(
@@ -209,7 +223,9 @@ public class Phone extends javax.swing.JFrame {
                 .addComponent(Mostrar_contraseña)
                 .addGap(32, 32, 32)
                 .addComponent(inicio_de_sesion, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 214, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 180, Short.MAX_VALUE)
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(inicio_sesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Bandera3)
                     .addComponent(Bandera1)
@@ -332,6 +348,7 @@ public class Phone extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
