@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package mobilephone;
+package mobilephone2;
 
 import java.awt.Color;
 import java.text.SimpleDateFormat;
@@ -26,10 +26,12 @@ public class Phone extends javax.swing.JFrame {
         //setUndecorated(true);
         initComponents();
         //setBackground(new Color(0,0,0,0));
-        body.setBackground(Color.WHITE);
+        //body.setBackground(Color.WHITE);
         time.setText(sdf.format(new Date()));
         
+        Movil.setVisible(true);
         inicio_sesion.setVisible(true);
+        interfaz_alumno.setVisible(false);
         MenuAlumno.setVisible(false);
         
         
@@ -44,10 +46,9 @@ public class Phone extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel4 = new javax.swing.JLabel();
-        body = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
+        Movil = new javax.swing.JPanel();
+        Movil_imagen = new javax.swing.JLabel();
+        Barra_notificaciones = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -64,13 +65,10 @@ public class Phone extends javax.swing.JFrame {
         Mostrar_contraseña = new javax.swing.JCheckBox();
         Password_olvidada = new javax.swing.JLabel();
         inicio_de_sesion = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
+        Selecione_idioma = new javax.swing.JLabel();
+        jSeparator2 = new javax.swing.JSeparator();
+        jSeparator1 = new javax.swing.JSeparator();
         interfaz_alumno = new javax.swing.JPanel();
-        Logo_UCO1 = new javax.swing.JLabel();
-        Header = new javax.swing.JPanel();
-        MenuBoton = new javax.swing.JLabel();
-        UCOApp = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
         MenuAlumno = new javax.swing.JPanel();
         MenuBotonCerrar = new javax.swing.JLabel();
         Nombre = new javax.swing.JLabel();
@@ -82,20 +80,27 @@ public class Phone extends javax.swing.JFrame {
         Moodle_imagen = new javax.swing.JLabel();
         Acerca_de = new javax.swing.JLabel();
         Acerca_de_imagen = new javax.swing.JLabel();
-        jSeparator1 = new javax.swing.JSeparator();
-        jSeparator2 = new javax.swing.JSeparator();
-
-        jLabel4.setText("jLabel4");
+        Header = new javax.swing.JPanel();
+        MenuBoton = new javax.swing.JLabel();
+        UCOApp = new javax.swing.JLabel();
+        Logo_UCO1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setName("UCO App"); // NOI18N
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        body.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        Movil.setBackground(new java.awt.Color(255, 255, 255));
+        Movil.setOpaque(false);
+        Movil.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/cellphone.png"))); // NOI18N
-        body.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 910));
+        Movil_imagen.setBackground(new java.awt.Color(255, 255, 255));
+        Movil_imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/cellphone.png"))); // NOI18N
+        Movil.add(Movil_imagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 910));
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Barra_notificaciones.setBackground(new java.awt.Color(255, 255, 255));
+        Barra_notificaciones.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Barra_notificaciones.setPreferredSize(new java.awt.Dimension(387, 32));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/signal-icon (1).jpg"))); // NOI18N
 
@@ -105,11 +110,11 @@ public class Phone extends javax.swing.JFrame {
 
         time.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout Barra_notificacionesLayout = new javax.swing.GroupLayout(Barra_notificaciones);
+        Barra_notificaciones.setLayout(Barra_notificacionesLayout);
+        Barra_notificacionesLayout.setHorizontalGroup(
+            Barra_notificacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Barra_notificacionesLayout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addComponent(time, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(195, 195, 195)
@@ -120,21 +125,20 @@ public class Phone extends javax.swing.JFrame {
                 .addComponent(jLabel3)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(time, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addGap(0, 0, 0))
+        Barra_notificacionesLayout.setVerticalGroup(
+            Barra_notificacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(time, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(Barra_notificacionesLayout.createSequentialGroup()
+                .addGroup(Barra_notificacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        body.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 400, 30));
+        Movil.add(Barra_notificaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 400, 32));
+
+        getContentPane().add(Movil, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 910));
 
         Logo_UCO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/logo_uco_small.png"))); // NOI18N
         Logo_UCO.setText("jLabel2");
@@ -186,50 +190,58 @@ public class Phone extends javax.swing.JFrame {
             }
         });
 
-        jLabel6.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
-        jLabel6.setText("                 Selección de idioma:");
+        Selecione_idioma.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
+        Selecione_idioma.setText("                 Selección de idioma:");
+
+        jSeparator2.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 0, 0, 0, new java.awt.Color(0, 125, 255)));
+
+        jSeparator1.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 0, 0, 0, new java.awt.Color(0, 125, 255)));
 
         javax.swing.GroupLayout inicio_sesionLayout = new javax.swing.GroupLayout(inicio_sesion);
         inicio_sesion.setLayout(inicio_sesionLayout);
         inicio_sesionLayout.setHorizontalGroup(
             inicio_sesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, inicio_sesionLayout.createSequentialGroup()
-                .addGroup(inicio_sesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, inicio_sesionLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(inicio_de_sesion, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, inicio_sesionLayout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(Bandera1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
-                        .addComponent(Bandera2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(17, 17, 17)))
-                .addGap(3, 3, 3)
-                .addComponent(Bandera3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20))
             .addGroup(inicio_sesionLayout.createSequentialGroup()
-                .addGap(86, 86, 86)
                 .addGroup(inicio_sesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Logo_UCO, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Password_olvidada)
-                    .addGroup(inicio_sesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(Usuario_campo)
-                        .addComponent(Usuario_etiqueta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(Contraseña_etiqueta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(Contraseña_campo)
-                        .addComponent(Mostrar_contraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(inicio_sesionLayout.createSequentialGroup()
+                        .addGap(36, 36, 36)
+                        .addComponent(Bandera1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(Bandera2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(Bandera3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(inicio_sesionLayout.createSequentialGroup()
+                        .addGap(147, 147, 147)
+                        .addComponent(inicio_de_sesion, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(inicio_sesionLayout.createSequentialGroup()
+                        .addGap(86, 86, 86)
+                        .addComponent(Selecione_idioma, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, inicio_sesionLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(inicio_sesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, inicio_sesionLayout.createSequentialGroup()
+                        .addGroup(inicio_sesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Logo_UCO, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Mostrar_contraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Password_olvidada)
+                            .addGroup(inicio_sesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(Usuario_etiqueta, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(Usuario_campo, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(Contraseña_etiqueta, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(Contraseña_campo, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(103, 103, 103))
+                    .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jSeparator2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
         inicio_sesionLayout.setVerticalGroup(
             inicio_sesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(inicio_sesionLayout.createSequentialGroup()
-                .addGap(83, 83, 83)
+                .addGap(47, 47, 47)
+                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(35, 35, 35)
                 .addComponent(Logo_UCO)
-                .addGap(29, 29, 29)
+                .addGap(27, 27, 27)
                 .addComponent(Usuario_etiqueta)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Usuario_campo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -237,79 +249,28 @@ public class Phone extends javax.swing.JFrame {
                 .addComponent(Contraseña_etiqueta)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Contraseña_campo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(Password_olvidada, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
+                .addComponent(Password_olvidada, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Mostrar_contraseña)
-                .addGap(32, 32, 32)
+                .addGap(38, 38, 38)
                 .addComponent(inicio_de_sesion, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 180, Short.MAX_VALUE)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(47, 47, 47)
+                .addComponent(Selecione_idioma, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(inicio_sesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Bandera3)
+                    .addComponent(Bandera2)
                     .addComponent(Bandera1)
-                    .addComponent(Bandera2))
-                .addContainerGap())
+                    .addComponent(Bandera3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 126, Short.MAX_VALUE)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(54, 54, 54))
         );
 
-        body.add(inicio_sesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 64, 380, 780));
+        getContentPane().add(inicio_sesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 64, 420, 820));
         inicio_sesion.setBackground(Color.WHITE);
 
         interfaz_alumno.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        Logo_UCO1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/logo_uco_small.png"))); // NOI18N
-        Logo_UCO1.setText("jLabel2");
-        interfaz_alumno.add(Logo_UCO1, new org.netbeans.lib.awtextra.AbsoluteConstraints(86, 106, 201, -1));
-
-        Header.setBackground(new java.awt.Color(53, 53, 255));
-
-        MenuBoton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/menu-button.png"))); // NOI18N
-        MenuBoton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                MenuBotonMouseClicked(evt);
-            }
-        });
-
-        UCOApp.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
-        UCOApp.setText("UCO App");
-
-        javax.swing.GroupLayout HeaderLayout = new javax.swing.GroupLayout(Header);
-        Header.setLayout(HeaderLayout);
-        HeaderLayout.setHorizontalGroup(
-            HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(HeaderLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(MenuBoton)
-                .addGap(18, 18, 18)
-                .addComponent(UCOApp)
-                .addContainerGap(240, Short.MAX_VALUE))
-        );
-        HeaderLayout.setVerticalGroup(
-            HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(HeaderLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(HeaderLayout.createSequentialGroup()
-                        .addComponent(MenuBoton)
-                        .addGap(0, 4, Short.MAX_VALUE))
-                    .addComponent(UCOApp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-
-        interfaz_alumno.add(Header, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 380, 60));
-
-        jButton1.setBackground(new java.awt.Color(53, 255, 53));
-        jButton1.setText("Consultar notas");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        interfaz_alumno.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 330, 130, 110));
-
-        body.add(interfaz_alumno, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 64, 380, 780));
-        interfaz_alumno.setBackground(Color.WHITE);
 
         MenuAlumno.setBackground(new java.awt.Color(255, 255, 255));
         MenuAlumno.setForeground(new java.awt.Color(43, 43, 43));
@@ -363,7 +324,13 @@ public class Phone extends javax.swing.JFrame {
         MenuAlumnoLayout.setHorizontalGroup(
             MenuAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MenuAlumnoLayout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(MenuAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(MenuBotonCerrar, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(Logout, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addContainerGap())
+            .addGroup(MenuAlumnoLayout.createSequentialGroup()
+                .addGap(28, 28, 28)
                 .addGroup(MenuAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Imagen)
                     .addComponent(Inicio_Imagen, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -371,20 +338,14 @@ public class Phone extends javax.swing.JFrame {
                     .addComponent(Moodle_imagen, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addGap(18, 18, 18)
                 .addGroup(MenuAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(MenuAlumnoLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(MenuBotonCerrar))
-                    .addGroup(MenuAlumnoLayout.createSequentialGroup()
-                        .addComponent(Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(Logout))
+                    .addComponent(Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(MenuAlumnoLayout.createSequentialGroup()
                         .addGroup(MenuAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(Acerca_de)
                             .addComponent(Moodle)
                             .addComponent(Inicio))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addGap(82, 82, 82)))
+                .addContainerGap(33, Short.MAX_VALUE))
         );
         MenuAlumnoLayout.setVerticalGroup(
             MenuAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -392,14 +353,13 @@ public class Phone extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(MenuBotonCerrar)
                 .addGap(18, 18, 18)
+                .addComponent(Logout)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(MenuAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(MenuAlumnoLayout.createSequentialGroup()
                         .addGroup(MenuAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(Imagen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Nombre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MenuAlumnoLayout.createSequentialGroup()
-                                .addComponent(Logout)
-                                .addGap(8, 8, 8)))
+                            .addComponent(Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(54, 54, 54)
                         .addComponent(Inicio))
                     .addComponent(Inicio_Imagen))
@@ -413,27 +373,63 @@ public class Phone extends javax.swing.JFrame {
                         .addComponent(Moodle_imagen)
                         .addGap(18, 18, 18)
                         .addComponent(Acerca_de_imagen)))
-                .addGap(516, 516, 516))
+                .addGap(517, 517, 517))
         );
 
-        body.add(MenuAlumno, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 280, 780));
+        interfaz_alumno.add(MenuAlumno, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 280, 780));
 
-        jSeparator1.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 0, 0, 0, new java.awt.Color(0, 125, 255)));
-        body.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 62, 420, 10));
+        Header.setBackground(new java.awt.Color(53, 53, 255));
 
-        jSeparator2.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 0, 0, 0, new java.awt.Color(0, 125, 255)));
-        body.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 850, 420, -1));
+        MenuBoton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/menu-button.png"))); // NOI18N
+        MenuBoton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                MenuBotonMouseClicked(evt);
+            }
+        });
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(body, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        UCOApp.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
+        UCOApp.setText("UCO App");
+
+        javax.swing.GroupLayout HeaderLayout = new javax.swing.GroupLayout(Header);
+        Header.setLayout(HeaderLayout);
+        HeaderLayout.setHorizontalGroup(
+            HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(HeaderLayout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(MenuBoton)
+                .addGap(18, 18, 18)
+                .addComponent(UCOApp)
+                .addContainerGap(262, Short.MAX_VALUE))
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(body, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        HeaderLayout.setVerticalGroup(
+            HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(HeaderLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(HeaderLayout.createSequentialGroup()
+                        .addComponent(MenuBoton)
+                        .addGap(0, 4, Short.MAX_VALUE))
+                    .addComponent(UCOApp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
+
+        interfaz_alumno.add(Header, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 420, 60));
+
+        Logo_UCO1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/logo_uco_small.png"))); // NOI18N
+        Logo_UCO1.setText("jLabel2");
+        interfaz_alumno.add(Logo_UCO1, new org.netbeans.lib.awtextra.AbsoluteConstraints(86, 106, 201, -1));
+
+        jButton1.setBackground(new java.awt.Color(53, 255, 53));
+        jButton1.setText("Consultar notas");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        interfaz_alumno.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 330, 130, 110));
+
+        getContentPane().add(interfaz_alumno, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 64, 420, 820));
+        interfaz_alumno.setBackground(Color.WHITE);
 
         pack();
         setLocationRelativeTo(null);
@@ -470,6 +466,7 @@ public class Phone extends javax.swing.JFrame {
 
     private void LogoutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LogoutMouseClicked
         MenuAlumno.setVisible(false);
+        interfaz_alumno.setVisible(false);
         inicio_sesion.setVisible(true);
     }//GEN-LAST:event_LogoutMouseClicked
 
@@ -512,6 +509,8 @@ public class Phone extends javax.swing.JFrame {
         }
         //</editor-fold>
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -527,6 +526,7 @@ public class Phone extends javax.swing.JFrame {
     private javax.swing.JLabel Bandera1;
     private javax.swing.JLabel Bandera2;
     private javax.swing.JLabel Bandera3;
+    private javax.swing.JPanel Barra_notificaciones;
     private javax.swing.JPasswordField Contraseña_campo;
     private javax.swing.JLabel Contraseña_etiqueta;
     private javax.swing.JPanel Header;
@@ -542,23 +542,21 @@ public class Phone extends javax.swing.JFrame {
     private javax.swing.JLabel Moodle;
     private javax.swing.JLabel Moodle_imagen;
     private javax.swing.JCheckBox Mostrar_contraseña;
+    private javax.swing.JPanel Movil;
+    private javax.swing.JLabel Movil_imagen;
     private javax.swing.JLabel Nombre;
     private javax.swing.JLabel Password_olvidada;
+    private javax.swing.JLabel Selecione_idioma;
     private javax.swing.JLabel UCOApp;
     private javax.swing.JTextField Usuario_campo;
     private javax.swing.JLabel Usuario_etiqueta;
-    private javax.swing.JPanel body;
     private javax.swing.JButton inicio_de_sesion;
     private javax.swing.JPanel inicio_sesion;
     private javax.swing.JPanel interfaz_alumno;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JLabel time;
