@@ -85,7 +85,8 @@ public class Phone extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
 
-        jLabel4.setText("jLabel4");
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("mobilephone2/bundle/Bundle_1"); // NOI18N
+        jLabel4.setText(bundle.getString("Phone.jLabel4.text")); // NOI18N
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -137,19 +138,19 @@ public class Phone extends javax.swing.JFrame {
         body.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 400, 30));
 
         Logo_UCO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/logo_uco_small.png"))); // NOI18N
-        Logo_UCO.setText("jLabel2");
+        Logo_UCO.setText(bundle.getString("Phone.Logo_UCO.text")); // NOI18N
 
         Bandera1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/bandera1_small.png"))); // NOI18N
-        Bandera1.setText("jLabel2");
+        Bandera1.setText(bundle.getString("Phone.Bandera1.text")); // NOI18N
 
         Bandera2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/bandera2.png"))); // NOI18N
-        Bandera2.setText("jLabel2");
+        Bandera2.setText(bundle.getString("Phone.Bandera2.text")); // NOI18N
 
         Bandera3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/bandera3.png"))); // NOI18N
-        Bandera3.setText("jLabel2");
+        Bandera3.setText(bundle.getString("Phone.Bandera3.text")); // NOI18N
 
         Usuario_campo.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
-        Usuario_campo.setText("Usuario1");
+        Usuario_campo.setText(bundle.getString("Phone.Usuario_campo.text")); // NOI18N
         Usuario_campo.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(0, 102, 255)));
         Usuario_campo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -158,17 +159,17 @@ public class Phone extends javax.swing.JFrame {
         });
 
         Usuario_etiqueta.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
-        Usuario_etiqueta.setText("Usuario");
+        Usuario_etiqueta.setText(bundle.getString("Phone.Usuario_etiqueta.text")); // NOI18N
 
         Contraseña_etiqueta.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
-        Contraseña_etiqueta.setText("Contraseña");
+        Contraseña_etiqueta.setText(bundle.getString("Phone.Contraseña_etiqueta.text")); // NOI18N
 
         Contraseña_campo.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
-        Contraseña_campo.setText("Contraseña1");
+        Contraseña_campo.setText(bundle.getString("Phone.Contraseña_campo.text")); // NOI18N
         Contraseña_campo.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(0, 102, 255)));
 
         Mostrar_contraseña.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
-        Mostrar_contraseña.setText("Mostrar contraseña");
+        Mostrar_contraseña.setText(bundle.getString("Phone.Mostrar_contraseña.text")); // NOI18N
         Mostrar_contraseña.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Mostrar_contraseñaActionPerformed(evt);
@@ -176,10 +177,10 @@ public class Phone extends javax.swing.JFrame {
         });
 
         Password_olvidada.setFont(new java.awt.Font("SansSerif", 0, 10)); // NOI18N
-        Password_olvidada.setText("Contraseña olvidada");
+        Password_olvidada.setText(bundle.getString("Phone.Password_olvidada.text")); // NOI18N
 
         inicio_de_sesion.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
-        inicio_de_sesion.setText("Iniciar Sesión");
+        inicio_de_sesion.setText(bundle.getString("Phone.inicio_de_sesion.text")); // NOI18N
         inicio_de_sesion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 inicio_de_sesionActionPerformed(evt);
@@ -187,7 +188,7 @@ public class Phone extends javax.swing.JFrame {
         });
 
         jLabel6.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
-        jLabel6.setText("                 Selección de idioma:");
+        jLabel6.setText(bundle.getString("Phone.jLabel6.text")); // NOI18N
 
         javax.swing.GroupLayout inicio_sesionLayout = new javax.swing.GroupLayout(inicio_sesion);
         inicio_sesion.setLayout(inicio_sesionLayout);
@@ -259,7 +260,7 @@ public class Phone extends javax.swing.JFrame {
         interfaz_alumno.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Logo_UCO1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/logo_uco_small.png"))); // NOI18N
-        Logo_UCO1.setText("jLabel2");
+        Logo_UCO1.setText(bundle.getString("Phone.Logo_UCO1.text")); // NOI18N
         interfaz_alumno.add(Logo_UCO1, new org.netbeans.lib.awtextra.AbsoluteConstraints(86, 106, 201, -1));
 
         Header.setBackground(new java.awt.Color(53, 53, 255));
@@ -272,7 +273,7 @@ public class Phone extends javax.swing.JFrame {
         });
 
         UCOApp.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
-        UCOApp.setText("UCO App");
+        UCOApp.setText(bundle.getString("Phone.UCOApp.text")); // NOI18N
 
         javax.swing.GroupLayout HeaderLayout = new javax.swing.GroupLayout(Header);
         Header.setLayout(HeaderLayout);
@@ -300,7 +301,7 @@ public class Phone extends javax.swing.JFrame {
         interfaz_alumno.add(Header, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 380, 60));
 
         jButton1.setBackground(new java.awt.Color(53, 255, 53));
-        jButton1.setText("Consultar notas");
+        jButton1.setText(bundle.getString("Phone.jButton1.text")); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -321,8 +322,7 @@ public class Phone extends javax.swing.JFrame {
             }
         });
 
-        Nombre.setForeground(new java.awt.Color(0, 0, 0));
-        Nombre.setText("Alumno1");
+        Nombre.setText(bundle.getString("Phone.Nombre.text")); // NOI18N
 
         Imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/avatar.png"))); // NOI18N
 
@@ -333,8 +333,7 @@ public class Phone extends javax.swing.JFrame {
             }
         });
 
-        Inicio.setForeground(new java.awt.Color(0, 0, 0));
-        Inicio.setText("Inicio");
+        Inicio.setText(bundle.getString("Phone.Inicio.text")); // NOI18N
         Inicio.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 InicioMouseClicked(evt);
@@ -348,13 +347,11 @@ public class Phone extends javax.swing.JFrame {
             }
         });
 
-        Moodle.setForeground(new java.awt.Color(0, 0, 0));
-        Moodle.setText("Moodle");
+        Moodle.setText(bundle.getString("Phone.Moodle.text")); // NOI18N
 
         Moodle_imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/moodle.png"))); // NOI18N
 
-        Acerca_de.setForeground(new java.awt.Color(0, 0, 0));
-        Acerca_de.setText("Acerca de");
+        Acerca_de.setText(bundle.getString("Phone.Acerca_de.text")); // NOI18N
 
         Acerca_de_imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/info.png"))); // NOI18N
 
