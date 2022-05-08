@@ -54,7 +54,13 @@ public class Phone extends javax.swing.JFrame {
                             consultar_grupo_grande.setVisible(false);
                             consultar_grupo_practica.setVisible(false);
                             consultar_horario.setVisible(false);
-        
+                        interfaz_profesor.setVisible(false);
+                            menu_profesor.setVisible(false);
+                            cabecera_profesor.setVisible(false);
+                            seleccion_profesor.setVisible(false);
+                            campus_docente.setVisible(false);
+                            estudios_propios.setVisible(false);
+                            seguimiento_tesis_tfg.setVisible(false);
         
     }
 
@@ -113,9 +119,9 @@ public class Phone extends javax.swing.JFrame {
         seleccion = new javax.swing.JPanel();
         Logo_UCO1 = new javax.swing.JLabel();
         consultar_notas_boton = new javax.swing.JButton();
-        consultar_matricula_boton = new javax.swing.JButton();
         consultar_horario_boton = new javax.swing.JButton();
         informacion_grado_boton1 = new javax.swing.JButton();
+        consultar_matricula_boton = new javax.swing.JButton();
         consultar_notas = new javax.swing.JPanel();
         Grado_Ingenieria = new javax.swing.JLabel();
         barra_creditos = new javax.swing.JProgressBar();
@@ -562,14 +568,14 @@ public class Phone extends javax.swing.JFrame {
                         .addComponent(Imagen)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MenuAlumnoLayout.createSequentialGroup()
-                .addGap(0, 61, Short.MAX_VALUE)
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(MenuAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(MenuAlumnoLayout.createSequentialGroup()
                         .addComponent(Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(Logout))
                     .addComponent(MenuBotonCerrar))
-                .addGap(45, 45, 45))
+                .addGap(110, 110, 110))
         );
         MenuAlumnoLayout.setVerticalGroup(
             MenuAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -600,10 +606,10 @@ public class Phone extends javax.swing.JFrame {
                             .addComponent(Moodle))
                         .addGap(28, 28, 28)
                         .addComponent(Acerca_de_imagen)))
-                .addContainerGap(567, Short.MAX_VALUE))
+                .addContainerGap(566, Short.MAX_VALUE))
         );
 
-        interfaz_alumno.add(MenuAlumno, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 280, 850));
+        interfaz_alumno.add(MenuAlumno, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 850));
 
         Header.setBackground(new java.awt.Color(53, 53, 255));
         Header.setName("Header"); // NOI18N
@@ -661,16 +667,6 @@ public class Phone extends javax.swing.JFrame {
             }
         });
 
-        consultar_matricula_boton.setBackground(new java.awt.Color(53, 255, 53));
-        consultar_matricula_boton.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
-        consultar_matricula_boton.setText(bundle.getString("Phone.consultar_matricula_boton.text")); // NOI18N
-        consultar_matricula_boton.setName("consultar_matricula_boton"); // NOI18N
-        consultar_matricula_boton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                consultar_matricula_botonActionPerformed(evt);
-            }
-        });
-
         consultar_horario_boton.setBackground(new java.awt.Color(255, 0, 0));
         consultar_horario_boton.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
         consultar_horario_boton.setText(bundle.getString("Phone.consultar_horario_boton.text")); // NOI18N
@@ -691,6 +687,16 @@ public class Phone extends javax.swing.JFrame {
             }
         });
 
+        consultar_matricula_boton.setBackground(new java.awt.Color(53, 255, 53));
+        consultar_matricula_boton.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        consultar_matricula_boton.setText(bundle.getString("Phone.consultar_matricula_boton.text")); // NOI18N
+        consultar_matricula_boton.setName("consultar_matricula_boton"); // NOI18N
+        consultar_matricula_boton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                consultar_matricula_botonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout seleccionLayout = new javax.swing.GroupLayout(seleccion);
         seleccion.setLayout(seleccionLayout);
         seleccionLayout.setHorizontalGroup(
@@ -705,26 +711,26 @@ public class Phone extends javax.swing.JFrame {
                         .addGroup(seleccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(consultar_horario_boton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(consultar_notas_boton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(30, 30, 30)
+                        .addGap(38, 38, 38)
                         .addGroup(seleccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(consultar_matricula_boton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(informacion_grado_boton1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(83, Short.MAX_VALUE))
+                .addContainerGap(75, Short.MAX_VALUE))
         );
         seleccionLayout.setVerticalGroup(
             seleccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(seleccionLayout.createSequentialGroup()
                 .addGap(61, 61, 61)
                 .addComponent(Logo_UCO1)
-                .addGap(187, 187, 187)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 125, Short.MAX_VALUE)
                 .addGroup(seleccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(consultar_notas_boton, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(consultar_matricula_boton, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(33, 33, 33)
+                    .addComponent(consultar_matricula_boton, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(consultar_notas_boton, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(38, 38, 38)
                 .addGroup(seleccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(consultar_horario_boton, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(informacion_grado_boton1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(166, Short.MAX_VALUE))
+                    .addComponent(informacion_grado_boton1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(consultar_horario_boton, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(223, 223, 223))
         );
 
         interfaz_alumno.add(seleccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 410, 790));
@@ -734,7 +740,6 @@ public class Phone extends javax.swing.JFrame {
         consultar_notas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Grado_Ingenieria.setFont(new java.awt.Font("Ubuntu", 1, 23)); // NOI18N
-        Grado_Ingenieria.setForeground(new java.awt.Color(0, 0, 0));
         Grado_Ingenieria.setText(bundle.getString("Phone.Grado_Ingenieria.text")); // NOI18N
         Grado_Ingenieria.setName("Grado_Ingenieria"); // NOI18N
         consultar_notas.add(Grado_Ingenieria, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
@@ -745,12 +750,10 @@ public class Phone extends javax.swing.JFrame {
         consultar_notas.add(barra_creditos, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 350, 10));
 
         creditos_etiqueta.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
-        creditos_etiqueta.setForeground(new java.awt.Color(0, 0, 0));
         creditos_etiqueta.setText(bundle.getString("Phone.creditos_etiqueta.text")); // NOI18N
         creditos_etiqueta.setName("creditos_etiqueta"); // NOI18N
         consultar_notas.add(creditos_etiqueta, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, -1, -1));
 
-        escuela.setForeground(new java.awt.Color(0, 0, 0));
         escuela.setText(bundle.getString("Phone.escuela.text")); // NOI18N
         escuela.setName("escuela"); // NOI18N
         consultar_notas.add(escuela, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, -1));
@@ -760,39 +763,33 @@ public class Phone extends javax.swing.JFrame {
         primera_asignatura.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         titulo_primera.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
-        titulo_primera.setForeground(new java.awt.Color(0, 0, 0));
         titulo_primera.setText(bundle.getString("Phone.titulo_primera.text")); // NOI18N
         titulo_primera.setName("titulo_primera"); // NOI18N
         primera_asignatura.add(titulo_primera, new org.netbeans.lib.awtextra.AbsoluteConstraints(56, 12, -1, -1));
 
-        convocatoria_primero.setForeground(new java.awt.Color(0, 0, 0));
         convocatoria_primero.setText(bundle.getString("Phone.convocatoria_primero.text")); // NOI18N
         convocatoria_primero.setName("convocatoria_primero"); // NOI18N
         primera_asignatura.add(convocatoria_primero, new org.netbeans.lib.awtextra.AbsoluteConstraints(56, 39, -1, -1));
 
         aprobado_texto_primera.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
-        aprobado_texto_primera.setForeground(new java.awt.Color(0, 0, 0));
         aprobado_texto_primera.setText(bundle.getString("Phone.aprobado_texto_primera.text")); // NOI18N
         aprobado_texto_primera.setName("aprobado_texto_primera"); // NOI18N
         primera_asignatura.add(aprobado_texto_primera, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 20, 20));
 
         aprobado_fondo_primera.setBackground(new java.awt.Color(255, 255, 0));
         aprobado_fondo_primera.setFont(new java.awt.Font("Ubuntu", 1, 24)); // NOI18N
-        aprobado_fondo_primera.setForeground(new java.awt.Color(0, 0, 0));
         aprobado_fondo_primera.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/yellow_circle.png"))); // NOI18N
         aprobado_fondo_primera.setText(bundle.getString("Phone.aprobado_fondo_primera.text")); // NOI18N
         aprobado_fondo_primera.setName("aprobado_fondo_primera"); // NOI18N
         primera_asignatura.add(aprobado_fondo_primera, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 40, 45));
 
         aprobado_nota_primera.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
-        aprobado_nota_primera.setForeground(new java.awt.Color(0, 0, 0));
         aprobado_nota_primera.setText(bundle.getString("Phone.aprobado_nota_primera.text")); // NOI18N
         aprobado_nota_primera.setName("aprobado_nota_primera"); // NOI18N
         primera_asignatura.add(aprobado_nota_primera, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 10, 30, 40));
 
         aprobado_fondo_nota_primera.setBackground(new java.awt.Color(255, 255, 0));
         aprobado_fondo_nota_primera.setFont(new java.awt.Font("Ubuntu", 1, 24)); // NOI18N
-        aprobado_fondo_nota_primera.setForeground(new java.awt.Color(0, 0, 0));
         aprobado_fondo_nota_primera.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/yellow_circle.png"))); // NOI18N
         aprobado_fondo_nota_primera.setText(bundle.getString("Phone.aprobado_fondo_nota_primera.text")); // NOI18N
         aprobado_fondo_nota_primera.setName("aprobado_fondo_nota_primera"); // NOI18N
@@ -805,39 +802,33 @@ public class Phone extends javax.swing.JFrame {
         segunda_asignatura.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         titulo_segunda.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
-        titulo_segunda.setForeground(new java.awt.Color(0, 0, 0));
         titulo_segunda.setText(bundle.getString("Phone.titulo_segunda.text")); // NOI18N
         titulo_segunda.setName("titulo_segunda"); // NOI18N
         segunda_asignatura.add(titulo_segunda, new org.netbeans.lib.awtextra.AbsoluteConstraints(56, 12, -1, -1));
 
-        convocatoria_segunda.setForeground(new java.awt.Color(0, 0, 0));
         convocatoria_segunda.setText(bundle.getString("Phone.convocatoria_segunda.text")); // NOI18N
         convocatoria_segunda.setName("convocatoria_segunda"); // NOI18N
         segunda_asignatura.add(convocatoria_segunda, new org.netbeans.lib.awtextra.AbsoluteConstraints(56, 39, -1, -1));
 
         aprobado_texto_segunda.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
-        aprobado_texto_segunda.setForeground(new java.awt.Color(0, 0, 0));
         aprobado_texto_segunda.setText(bundle.getString("Phone.aprobado_texto_segunda.text")); // NOI18N
         aprobado_texto_segunda.setName("aprobado_texto_segunda"); // NOI18N
         segunda_asignatura.add(aprobado_texto_segunda, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 20, 20));
 
         aprobado_fondo_segunda.setBackground(new java.awt.Color(255, 255, 0));
         aprobado_fondo_segunda.setFont(new java.awt.Font("Ubuntu", 1, 24)); // NOI18N
-        aprobado_fondo_segunda.setForeground(new java.awt.Color(0, 0, 0));
         aprobado_fondo_segunda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/red_circle.png"))); // NOI18N
         aprobado_fondo_segunda.setText(bundle.getString("Phone.aprobado_fondo_segunda.text")); // NOI18N
         aprobado_fondo_segunda.setName("aprobado_fondo_segunda"); // NOI18N
         segunda_asignatura.add(aprobado_fondo_segunda, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 40, 45));
 
         aprobado_nota_segunda.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
-        aprobado_nota_segunda.setForeground(new java.awt.Color(0, 0, 0));
         aprobado_nota_segunda.setText(bundle.getString("Phone.aprobado_nota_segunda.text")); // NOI18N
         aprobado_nota_segunda.setName("aprobado_nota_segunda"); // NOI18N
         segunda_asignatura.add(aprobado_nota_segunda, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 10, 30, 40));
 
         aprobado_fondo_nota_segunda.setBackground(new java.awt.Color(255, 255, 0));
         aprobado_fondo_nota_segunda.setFont(new java.awt.Font("Ubuntu", 1, 24)); // NOI18N
-        aprobado_fondo_nota_segunda.setForeground(new java.awt.Color(0, 0, 0));
         aprobado_fondo_nota_segunda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/red_circle.png"))); // NOI18N
         aprobado_fondo_nota_segunda.setText(bundle.getString("Phone.aprobado_fondo_nota_segunda.text")); // NOI18N
         aprobado_fondo_nota_segunda.setName("aprobado_fondo_nota_segunda"); // NOI18N
@@ -905,34 +896,29 @@ public class Phone extends javax.swing.JFrame {
         primer_grupo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         titulo_primer.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
-        titulo_primer.setForeground(new java.awt.Color(0, 0, 0));
         titulo_primer.setText(bundle.getString("Phone.titulo_primer.text")); // NOI18N
         titulo_primer.setName("titulo_primer"); // NOI18N
         primer_grupo.add(titulo_primer, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, -1, -1));
 
         grupo_texto_primer.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
-        grupo_texto_primer.setForeground(new java.awt.Color(0, 0, 0));
         grupo_texto_primer.setText(bundle.getString("Phone.grupo_texto_primer.text")); // NOI18N
         grupo_texto_primer.setName("grupo_texto_primer"); // NOI18N
         primer_grupo.add(grupo_texto_primer, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, 20));
 
         fondo_primer.setBackground(new java.awt.Color(255, 255, 0));
         fondo_primer.setFont(new java.awt.Font("Ubuntu", 1, 24)); // NOI18N
-        fondo_primer.setForeground(new java.awt.Color(0, 0, 0));
         fondo_primer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/grey_circle.png"))); // NOI18N
         fondo_primer.setText(bundle.getString("Phone.fondo_primer.text")); // NOI18N
         fondo_primer.setName("fondo_primer"); // NOI18N
         primer_grupo.add(fondo_primer, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 40, 45));
 
         grupo_primer.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
-        grupo_primer.setForeground(new java.awt.Color(0, 0, 0));
         grupo_primer.setText(bundle.getString("Phone.grupo_primer.text")); // NOI18N
         grupo_primer.setName("grupo_primer"); // NOI18N
         primer_grupo.add(grupo_primer, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 10, 40, 40));
 
         grupo_fondo_primer.setBackground(new java.awt.Color(255, 255, 0));
         grupo_fondo_primer.setFont(new java.awt.Font("Ubuntu", 1, 24)); // NOI18N
-        grupo_fondo_primer.setForeground(new java.awt.Color(0, 0, 0));
         grupo_fondo_primer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/grey_circle.png"))); // NOI18N
         grupo_fondo_primer.setText(bundle.getString("Phone.grupo_fondo_primer.text")); // NOI18N
         grupo_fondo_primer.setName("grupo_fondo_primer"); // NOI18N
@@ -945,34 +931,29 @@ public class Phone extends javax.swing.JFrame {
         segundo_grupo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         titulo_segundo.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
-        titulo_segundo.setForeground(new java.awt.Color(0, 0, 0));
         titulo_segundo.setText(bundle.getString("Phone.titulo_segundo.text")); // NOI18N
         titulo_segundo.setName("titulo_segundo"); // NOI18N
         segundo_grupo.add(titulo_segundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, -1, -1));
 
         grupo_texto_segundo.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
-        grupo_texto_segundo.setForeground(new java.awt.Color(0, 0, 0));
         grupo_texto_segundo.setText(bundle.getString("Phone.grupo_texto_segundo.text")); // NOI18N
         grupo_texto_segundo.setName("grupo_texto_segundo"); // NOI18N
         segundo_grupo.add(grupo_texto_segundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, 20));
 
         fondo_segundo.setBackground(new java.awt.Color(255, 255, 0));
         fondo_segundo.setFont(new java.awt.Font("Ubuntu", 1, 24)); // NOI18N
-        fondo_segundo.setForeground(new java.awt.Color(0, 0, 0));
         fondo_segundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/grey_circle.png"))); // NOI18N
         fondo_segundo.setText(bundle.getString("Phone.fondo_segundo.text")); // NOI18N
         fondo_segundo.setName("fondo_segundo"); // NOI18N
         segundo_grupo.add(fondo_segundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 40, 45));
 
         grupo_segundo.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
-        grupo_segundo.setForeground(new java.awt.Color(0, 0, 0));
         grupo_segundo.setText(bundle.getString("Phone.grupo_segundo.text")); // NOI18N
         grupo_segundo.setName("grupo_segundo"); // NOI18N
         segundo_grupo.add(grupo_segundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 10, 40, 40));
 
         grupo_fondo_segundo.setBackground(new java.awt.Color(255, 255, 0));
         grupo_fondo_segundo.setFont(new java.awt.Font("Ubuntu", 1, 24)); // NOI18N
-        grupo_fondo_segundo.setForeground(new java.awt.Color(0, 0, 0));
         grupo_fondo_segundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/grey_circle.png"))); // NOI18N
         grupo_fondo_segundo.setText(bundle.getString("Phone.grupo_fondo_segundo.text")); // NOI18N
         grupo_fondo_segundo.setName("grupo_fondo_segundo"); // NOI18N
@@ -992,34 +973,29 @@ public class Phone extends javax.swing.JFrame {
         primer_grupo_practica.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         titulo_primer_grupo.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
-        titulo_primer_grupo.setForeground(new java.awt.Color(0, 0, 0));
         titulo_primer_grupo.setText(bundle.getString("Phone.titulo_primer_grupo.text")); // NOI18N
         titulo_primer_grupo.setName("titulo_primer_grupo"); // NOI18N
         primer_grupo_practica.add(titulo_primer_grupo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, -1, -1));
 
         texto_primer_grupo.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
-        texto_primer_grupo.setForeground(new java.awt.Color(0, 0, 0));
         texto_primer_grupo.setText(bundle.getString("Phone.texto_primer_grupo.text")); // NOI18N
         texto_primer_grupo.setName("texto_primer_grupo"); // NOI18N
         primer_grupo_practica.add(texto_primer_grupo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, 20));
 
         fondo_primer_grupo.setBackground(new java.awt.Color(255, 255, 0));
         fondo_primer_grupo.setFont(new java.awt.Font("Ubuntu", 1, 24)); // NOI18N
-        fondo_primer_grupo.setForeground(new java.awt.Color(0, 0, 0));
         fondo_primer_grupo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/grey_circle.png"))); // NOI18N
         fondo_primer_grupo.setText(bundle.getString("Phone.fondo_primer_grupo.text")); // NOI18N
         fondo_primer_grupo.setName("fondo_primer_grupo"); // NOI18N
         primer_grupo_practica.add(fondo_primer_grupo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 40, 45));
 
         texto_primer_grupo_mediano.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
-        texto_primer_grupo_mediano.setForeground(new java.awt.Color(0, 0, 0));
         texto_primer_grupo_mediano.setText(bundle.getString("Phone.texto_primer_grupo_mediano.text")); // NOI18N
         texto_primer_grupo_mediano.setName("texto_primer_grupo_mediano"); // NOI18N
         primer_grupo_practica.add(texto_primer_grupo_mediano, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 10, 40, 40));
 
         grupo_fondo_primer1.setBackground(new java.awt.Color(255, 255, 0));
         grupo_fondo_primer1.setFont(new java.awt.Font("Ubuntu", 1, 24)); // NOI18N
-        grupo_fondo_primer1.setForeground(new java.awt.Color(0, 0, 0));
         grupo_fondo_primer1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/grey_circle.png"))); // NOI18N
         grupo_fondo_primer1.setText(bundle.getString("Phone.grupo_fondo_primer1.text")); // NOI18N
         grupo_fondo_primer1.setName("grupo_fondo_primer1"); // NOI18N
@@ -1032,34 +1008,29 @@ public class Phone extends javax.swing.JFrame {
         segundo_grupo_practica.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         titulo_segundo_grupo.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
-        titulo_segundo_grupo.setForeground(new java.awt.Color(0, 0, 0));
         titulo_segundo_grupo.setText(bundle.getString("Phone.titulo_segundo_grupo.text")); // NOI18N
         titulo_segundo_grupo.setName("titulo_segundo_grupo"); // NOI18N
         segundo_grupo_practica.add(titulo_segundo_grupo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, -1, -1));
 
         texto_segundo_grupo.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
-        texto_segundo_grupo.setForeground(new java.awt.Color(0, 0, 0));
         texto_segundo_grupo.setText(bundle.getString("Phone.texto_segundo_grupo.text")); // NOI18N
         texto_segundo_grupo.setName("texto_segundo_grupo"); // NOI18N
         segundo_grupo_practica.add(texto_segundo_grupo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, 20));
 
         fondo_segundo_grupo.setBackground(new java.awt.Color(255, 255, 0));
         fondo_segundo_grupo.setFont(new java.awt.Font("Ubuntu", 1, 24)); // NOI18N
-        fondo_segundo_grupo.setForeground(new java.awt.Color(0, 0, 0));
         fondo_segundo_grupo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/grey_circle.png"))); // NOI18N
         fondo_segundo_grupo.setText(bundle.getString("Phone.fondo_segundo_grupo.text")); // NOI18N
         fondo_segundo_grupo.setName("fondo_segundo_grupo"); // NOI18N
         segundo_grupo_practica.add(fondo_segundo_grupo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 40, 45));
 
         texto_segundo_grupo_mediano.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
-        texto_segundo_grupo_mediano.setForeground(new java.awt.Color(0, 0, 0));
         texto_segundo_grupo_mediano.setText(bundle.getString("Phone.texto_segundo_grupo_mediano.text")); // NOI18N
         texto_segundo_grupo_mediano.setName("texto_segundo_grupo_mediano"); // NOI18N
         segundo_grupo_practica.add(texto_segundo_grupo_mediano, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 10, 40, 40));
 
         grupo_fondo_segundo1.setBackground(new java.awt.Color(255, 255, 0));
         grupo_fondo_segundo1.setFont(new java.awt.Font("Ubuntu", 1, 24)); // NOI18N
-        grupo_fondo_segundo1.setForeground(new java.awt.Color(0, 0, 0));
         grupo_fondo_segundo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/grey_circle.png"))); // NOI18N
         grupo_fondo_segundo1.setText(bundle.getString("Phone.grupo_fondo_segundo1.text")); // NOI18N
         grupo_fondo_segundo1.setName("grupo_fondo_segundo1"); // NOI18N
@@ -1094,26 +1065,22 @@ public class Phone extends javax.swing.JFrame {
         primera_asignatura_matricula.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         titulo_primera_asignatura.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
-        titulo_primera_asignatura.setForeground(new java.awt.Color(0, 0, 0));
         titulo_primera_asignatura.setText(bundle.getString("Phone.titulo_primera_asignatura.text")); // NOI18N
         titulo_primera_asignatura.setName("titulo_primera_asignatura"); // NOI18N
         primera_asignatura_matricula.add(titulo_primera_asignatura, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, -1, -1));
 
         texto_primera_asignatura.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
-        texto_primera_asignatura.setForeground(new java.awt.Color(0, 0, 0));
         texto_primera_asignatura.setText(bundle.getString("Phone.texto_primera_asignatura.text")); // NOI18N
         texto_primera_asignatura.setName("texto_primera_asignatura"); // NOI18N
         primera_asignatura_matricula.add(texto_primera_asignatura, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, 20));
 
         fondo_primer1.setBackground(new java.awt.Color(255, 255, 0));
         fondo_primer1.setFont(new java.awt.Font("Ubuntu", 1, 24)); // NOI18N
-        fondo_primer1.setForeground(new java.awt.Color(0, 0, 0));
         fondo_primer1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/grey_circle.png"))); // NOI18N
         fondo_primer1.setText(bundle.getString("Phone.fondo_primer1.text")); // NOI18N
         fondo_primer1.setName("fondo_primer1"); // NOI18N
         primera_asignatura_matricula.add(fondo_primer1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 40, 45));
 
-        curso_primera_asignatura.setForeground(new java.awt.Color(0, 0, 0));
         curso_primera_asignatura.setText(bundle.getString("Phone.curso_primera_asignatura.text")); // NOI18N
         curso_primera_asignatura.setName("curso_primera_asignatura"); // NOI18N
         primera_asignatura_matricula.add(curso_primera_asignatura, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, -1, -1));
@@ -1125,26 +1092,22 @@ public class Phone extends javax.swing.JFrame {
         segunda_asignatura_matricula.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         titulo_segunda_asignatura.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
-        titulo_segunda_asignatura.setForeground(new java.awt.Color(0, 0, 0));
         titulo_segunda_asignatura.setText(bundle.getString("Phone.titulo_segunda_asignatura.text")); // NOI18N
         titulo_segunda_asignatura.setName("titulo_segunda_asignatura"); // NOI18N
         segunda_asignatura_matricula.add(titulo_segunda_asignatura, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, -1, -1));
 
         texto_segunda_asignatura.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
-        texto_segunda_asignatura.setForeground(new java.awt.Color(0, 0, 0));
         texto_segunda_asignatura.setText(bundle.getString("Phone.texto_segunda_asignatura.text")); // NOI18N
         texto_segunda_asignatura.setName("texto_segunda_asignatura"); // NOI18N
         segunda_asignatura_matricula.add(texto_segunda_asignatura, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, 20));
 
         fondo_segunda_asignatura.setBackground(new java.awt.Color(255, 255, 0));
         fondo_segunda_asignatura.setFont(new java.awt.Font("Ubuntu", 1, 24)); // NOI18N
-        fondo_segunda_asignatura.setForeground(new java.awt.Color(0, 0, 0));
         fondo_segunda_asignatura.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/grey_circle.png"))); // NOI18N
         fondo_segunda_asignatura.setText(bundle.getString("Phone.fondo_segunda_asignatura.text")); // NOI18N
         fondo_segunda_asignatura.setName("fondo_segunda_asignatura"); // NOI18N
         segunda_asignatura_matricula.add(fondo_segunda_asignatura, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 40, 45));
 
-        curso_primera_asignatura1.setForeground(new java.awt.Color(0, 0, 0));
         curso_primera_asignatura1.setText(bundle.getString("Phone.curso_primera_asignatura1.text")); // NOI18N
         curso_primera_asignatura1.setName("curso_primera_asignatura1"); // NOI18N
         segunda_asignatura_matricula.add(curso_primera_asignatura1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, -1, -1));
@@ -1405,26 +1368,22 @@ public class Phone extends javax.swing.JFrame {
         primera_asignatura_impartida.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         titulo_primera_asignatura_impartida.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
-        titulo_primera_asignatura_impartida.setForeground(new java.awt.Color(0, 0, 0));
         titulo_primera_asignatura_impartida.setText(bundle.getString("Phone.titulo_primera_asignatura_impartida.text")); // NOI18N
         titulo_primera_asignatura_impartida.setName("titulo_primera_asignatura_impartida"); // NOI18N
         primera_asignatura_impartida.add(titulo_primera_asignatura_impartida, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, -1, -1));
 
         texto_primera_asignatura_impartida.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
-        texto_primera_asignatura_impartida.setForeground(new java.awt.Color(0, 0, 0));
         texto_primera_asignatura_impartida.setText(bundle.getString("Phone.texto_primera_asignatura_impartida.text")); // NOI18N
         texto_primera_asignatura_impartida.setName("texto_primera_asignatura_impartida"); // NOI18N
         primera_asignatura_impartida.add(texto_primera_asignatura_impartida, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, 20));
 
         fondo_primera_asignatura_impartida.setBackground(new java.awt.Color(255, 255, 0));
         fondo_primera_asignatura_impartida.setFont(new java.awt.Font("Ubuntu", 1, 24)); // NOI18N
-        fondo_primera_asignatura_impartida.setForeground(new java.awt.Color(0, 0, 0));
         fondo_primera_asignatura_impartida.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/grey_circle.png"))); // NOI18N
         fondo_primera_asignatura_impartida.setText(bundle.getString("Phone.fondo_primera_asignatura_impartida.text")); // NOI18N
         fondo_primera_asignatura_impartida.setName("fondo_primera_asignatura_impartida"); // NOI18N
         primera_asignatura_impartida.add(fondo_primera_asignatura_impartida, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 40, 45));
 
-        curso_primera_asignatura_impartida.setForeground(new java.awt.Color(0, 0, 0));
         curso_primera_asignatura_impartida.setText(bundle.getString("Phone.curso_primera_asignatura_impartida.text")); // NOI18N
         curso_primera_asignatura_impartida.setName("curso_primera_asignatura_impartida"); // NOI18N
         primera_asignatura_impartida.add(curso_primera_asignatura_impartida, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, -1, -1));
@@ -1436,26 +1395,22 @@ public class Phone extends javax.swing.JFrame {
         segunda_asignatura_impartida.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         titulo_segunda_asignatura_impartida.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
-        titulo_segunda_asignatura_impartida.setForeground(new java.awt.Color(0, 0, 0));
         titulo_segunda_asignatura_impartida.setText(bundle.getString("Phone.titulo_segunda_asignatura_impartida.text")); // NOI18N
         titulo_segunda_asignatura_impartida.setName("titulo_segunda_asignatura_impartida"); // NOI18N
         segunda_asignatura_impartida.add(titulo_segunda_asignatura_impartida, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, -1, -1));
 
         texto_segunda_asignatura_impartida.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
-        texto_segunda_asignatura_impartida.setForeground(new java.awt.Color(0, 0, 0));
         texto_segunda_asignatura_impartida.setText(bundle.getString("Phone.texto_segunda_asignatura_impartida.text")); // NOI18N
         texto_segunda_asignatura_impartida.setName("texto_segunda_asignatura_impartida"); // NOI18N
         segunda_asignatura_impartida.add(texto_segunda_asignatura_impartida, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, 20));
 
         fondo_segunda_asignatura_impartida.setBackground(new java.awt.Color(255, 255, 0));
         fondo_segunda_asignatura_impartida.setFont(new java.awt.Font("Ubuntu", 1, 24)); // NOI18N
-        fondo_segunda_asignatura_impartida.setForeground(new java.awt.Color(0, 0, 0));
         fondo_segunda_asignatura_impartida.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/grey_circle.png"))); // NOI18N
         fondo_segunda_asignatura_impartida.setText(bundle.getString("Phone.fondo_segunda_asignatura_impartida.text")); // NOI18N
         fondo_segunda_asignatura_impartida.setName("fondo_segunda_asignatura_impartida"); // NOI18N
         segunda_asignatura_impartida.add(fondo_segunda_asignatura_impartida, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 40, 45));
 
-        curso_segunda_asignatura_impartida.setForeground(new java.awt.Color(0, 0, 0));
         curso_segunda_asignatura_impartida.setText(bundle.getString("Phone.curso_segunda_asignatura_impartida.text")); // NOI18N
         curso_segunda_asignatura_impartida.setName("curso_segunda_asignatura_impartida"); // NOI18N
         segunda_asignatura_impartida.add(curso_segunda_asignatura_impartida, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, -1, -1));
@@ -1479,13 +1434,11 @@ public class Phone extends javax.swing.JFrame {
         primer_estudio.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         titulo_primer_estudio.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
-        titulo_primer_estudio.setForeground(new java.awt.Color(0, 0, 0));
         titulo_primer_estudio.setText(bundle.getString("Phone.titulo_primer_estudio.text")); // NOI18N
         titulo_primer_estudio.setName("titulo_primer_estudio"); // NOI18N
         primer_estudio.add(titulo_primer_estudio, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, -1, -1));
 
         dibujo_primer_estudio.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
-        dibujo_primer_estudio.setForeground(new java.awt.Color(0, 0, 0));
         dibujo_primer_estudio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/CCNA1.png"))); // NOI18N
         dibujo_primer_estudio.setText(bundle.getString("Phone.dibujo_primer_estudio.text")); // NOI18N
         dibujo_primer_estudio.setName("dibujo_primer_estudio"); // NOI18N
@@ -1493,7 +1446,6 @@ public class Phone extends javax.swing.JFrame {
 
         fondo_primer_estudio.setBackground(new java.awt.Color(255, 255, 0));
         fondo_primer_estudio.setFont(new java.awt.Font("Ubuntu", 1, 24)); // NOI18N
-        fondo_primer_estudio.setForeground(new java.awt.Color(0, 0, 0));
         fondo_primer_estudio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/grey_circle.png"))); // NOI18N
         fondo_primer_estudio.setText(bundle.getString("Phone.fondo_primer_estudio.text")); // NOI18N
         fondo_primer_estudio.setName("fondo_primer_estudio"); // NOI18N
@@ -1506,13 +1458,11 @@ public class Phone extends javax.swing.JFrame {
         segundo_estudio.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         titulo_segundo_estudio.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
-        titulo_segundo_estudio.setForeground(new java.awt.Color(0, 0, 0));
         titulo_segundo_estudio.setText(bundle.getString("Phone.titulo_segundo_estudio.text")); // NOI18N
         titulo_segundo_estudio.setName("titulo_segundo_estudio"); // NOI18N
         segundo_estudio.add(titulo_segundo_estudio, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, -1, -1));
 
         dibujo_segundo_estudio.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
-        dibujo_segundo_estudio.setForeground(new java.awt.Color(0, 0, 0));
         dibujo_segundo_estudio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/CCNA2.png"))); // NOI18N
         dibujo_segundo_estudio.setText(bundle.getString("Phone.dibujo_segundo_estudio.text")); // NOI18N
         dibujo_segundo_estudio.setName("dibujo_segundo_estudio"); // NOI18N
@@ -1520,7 +1470,6 @@ public class Phone extends javax.swing.JFrame {
 
         fondo_segundo_estudio.setBackground(new java.awt.Color(255, 255, 0));
         fondo_segundo_estudio.setFont(new java.awt.Font("Ubuntu", 1, 24)); // NOI18N
-        fondo_segundo_estudio.setForeground(new java.awt.Color(0, 0, 0));
         fondo_segundo_estudio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/grey_circle.png"))); // NOI18N
         fondo_segundo_estudio.setText(bundle.getString("Phone.fondo_segundo_estudio.text")); // NOI18N
         fondo_segundo_estudio.setName("fondo_segundo_estudio"); // NOI18N
@@ -1545,13 +1494,11 @@ public class Phone extends javax.swing.JFrame {
         primer_tfg.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         titulo_primer_tfg.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
-        titulo_primer_tfg.setForeground(new java.awt.Color(0, 0, 0));
         titulo_primer_tfg.setText(bundle.getString("Phone.titulo_primer_tfg.text")); // NOI18N
         titulo_primer_tfg.setName("titulo_primer_tfg"); // NOI18N
         primer_tfg.add(titulo_primer_tfg, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, -1, -1));
 
         dibujo_primer_tfg.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
-        dibujo_primer_tfg.setForeground(new java.awt.Color(0, 0, 0));
         dibujo_primer_tfg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/CCNA1.png"))); // NOI18N
         dibujo_primer_tfg.setText(bundle.getString("Phone.dibujo_primer_tfg.text")); // NOI18N
         dibujo_primer_tfg.setName("dibujo_primer_tfg"); // NOI18N
@@ -1559,7 +1506,6 @@ public class Phone extends javax.swing.JFrame {
 
         fondo_primer_estudio1.setBackground(new java.awt.Color(255, 255, 0));
         fondo_primer_estudio1.setFont(new java.awt.Font("Ubuntu", 1, 24)); // NOI18N
-        fondo_primer_estudio1.setForeground(new java.awt.Color(0, 0, 0));
         fondo_primer_estudio1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/grey_circle.png"))); // NOI18N
         fondo_primer_estudio1.setText(bundle.getString("Phone.fondo_primer_estudio1.text")); // NOI18N
         fondo_primer_estudio1.setName("fondo_primer_estudio1"); // NOI18N
@@ -1572,13 +1518,11 @@ public class Phone extends javax.swing.JFrame {
         segundo_estudio1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         titulo_segundo_estudio1.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
-        titulo_segundo_estudio1.setForeground(new java.awt.Color(0, 0, 0));
         titulo_segundo_estudio1.setText(bundle.getString("Phone.titulo_segundo_estudio1.text")); // NOI18N
         titulo_segundo_estudio1.setName("titulo_segundo_estudio1"); // NOI18N
         segundo_estudio1.add(titulo_segundo_estudio1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, -1, -1));
 
         dibujo_segundo_estudio1.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
-        dibujo_segundo_estudio1.setForeground(new java.awt.Color(0, 0, 0));
         dibujo_segundo_estudio1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/CCNA2.png"))); // NOI18N
         dibujo_segundo_estudio1.setText(bundle.getString("Phone.dibujo_segundo_estudio1.text")); // NOI18N
         dibujo_segundo_estudio1.setName("dibujo_segundo_estudio1"); // NOI18N
@@ -1586,7 +1530,6 @@ public class Phone extends javax.swing.JFrame {
 
         fondo_segundo_estudio1.setBackground(new java.awt.Color(255, 255, 0));
         fondo_segundo_estudio1.setFont(new java.awt.Font("Ubuntu", 1, 24)); // NOI18N
-        fondo_segundo_estudio1.setForeground(new java.awt.Color(0, 0, 0));
         fondo_segundo_estudio1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/grey_circle.png"))); // NOI18N
         fondo_segundo_estudio1.setText(bundle.getString("Phone.fondo_segundo_estudio1.text")); // NOI18N
         fondo_segundo_estudio1.setName("fondo_segundo_estudio1"); // NOI18N
@@ -1617,10 +1560,22 @@ public class Phone extends javax.swing.JFrame {
 
     private void inicio_de_sesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inicio_de_sesionActionPerformed
         // TODO add your handling code here:
+        String campo = Usuario_campo.getText();
+        
         inicio_sesion.setVisible(false);
-        interfaz_alumno.setVisible(true);
-            Header.setVisible(true);
-            seleccion.setVisible(true);
+        
+        if(campo.equals("Alumno1"))
+        {
+            interfaz_alumno.setVisible(true);
+        }
+        else if (campo.equals("Profesor1"))
+        {
+            interfaz_profesor.setVisible(true);
+            cabecera_profesor.setVisible(true);
+            seleccion_profesor.setVisible(true);
+        }
+        Header.setVisible(true);
+        seleccion.setVisible(true);
     }//GEN-LAST:event_inicio_de_sesionActionPerformed
 
     private void Mostrar_contraseñaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Mostrar_contraseñaActionPerformed
@@ -1680,22 +1635,208 @@ public class Phone extends javax.swing.JFrame {
     private void espanol_botonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_espanol_botonActionPerformed
         // TODO add your handling code here:
         currentLocale = new Locale("es", "ES");
+                
+        ResourceBundle bundle = ResourceBundle.getBundle("mobilephone2.bundle.Bundle", currentLocale);
         
-        ResourceBundle.getBundle("mobilephone2.bundle.Bundle", currentLocale);
+        Usuario_etiqueta.setText(bundle.getString("Phone.Usuario_etiqueta.text")); // NOI18N
+        
+        Usuario_campo.setText(bundle.getString("Phone.Usuario_campo.text")); // NOI18N
+
+        Contraseña_etiqueta.setText(bundle.getString("Phone.Contraseña_etiqueta.text")); // NOI18N
+
+        Contraseña_campo.setText(bundle.getString("Phone.Contraseña_campo.text")); // NOI18N
+
+        Mostrar_contraseña.setText(bundle.getString("Phone.Mostrar_contraseña.text")); // NOI18N
+
+        Password_olvidada.setText(bundle.getString("Phone.Password_olvidada.text")); // NOI18N
+
+        inicio_de_sesion.setText(bundle.getString("Phone.inicio_de_sesion.text")); // NOI18N
+
+        Selecione_idioma1.setText(bundle.getString("Phone.Selecione_idioma1.text")); // NOI18N
+        
+        Nombre.setText(bundle.getString("Phone.Nombre.text"));
+        
+        Acerca_de.setText(bundle.getString("Phone.Acerca_de.text"));      
+        
+        Moodle.setText(bundle.getString("Phone.Moodle.text"));
+        
+        Inicio.setText (bundle.getString("Phone.Inicio.text"));
+        
+        creditos_etiqueta.setText(bundle.getString("Phone.creditos_etiqueta.text"));
+        
+        escuela.setText(bundle.getString("Phone.escuela.text"));
+
+        titulo_primera.setText(bundle.getString("Phone.titulo_primera.text"));
+        convocatoria_primero.setText(bundle.getString("Phone.convocatoria_primero.text"));
+        titulo_segunda.setText(bundle.getString("Phone.titulo_segunda.text"));
+        convocatoria_segunda.setText(bundle.getString("Phone.convocatoria_segunda.text"));
+        consultar_matricula_boton.setText(bundle.getString("Phone.consultar_matricula_boton.text"));
+        consultar_abonare_boton.setText(bundle.getString("Phone.consultar_abonare_boton.text"));
+        consultar_grupo_grande_boton.setText(bundle.getString("Phone.consultar_grupo_grande_boton.text"));
+        consultar_grupo_practicas_boton.setText(bundle.getString("Phone.consultar_grupo_practicas_boton.text"));
+        titulo_primer.setText(bundle.getString("Phone.titulo_primer.text"));
+        titulo_segundo.setText(bundle.getString("Phone.titulo_segundo.text"));
+        titulo_primer_grupo.setText(bundle.getString("Phone.titulo_primer_grupo.text"));
+        titulo_segundo_grupo.setText(bundle.getString("Phone.titulo_segundo_grupo.text"));
+
+        consultar_horario_boton.setText(bundle.getString("Phone.consultar_horario_boton.text"));
+        informacion_grado_boton1.setText(bundle.getString("Phone.informacion_grado_boton1.text"));
+        titulo_primera_asignatura.setText(bundle.getString("Phone.titulo_primera_asignatura.text"));
+        titulo_segunda_asignatura.setText(bundle.getString("Phone.titulo_segunda_asignatura.text"));
+        curso_primera_asignatura.setText(bundle.getString("Phone.curso_primera_asignatura.text"));
+        
+        curso_primera_asignatura1.setText(bundle.getString("Phone.curso_primera_asignatura1.text"));
+        campus_docente_boton.setText(bundle.getString("Phone.campus_docente_boton.text"));
+        estudios_propios_boton.setText(bundle.getString("Phone.estudios_propios_boton.text"));
+        seguimiento_tesis_tfg_boton.setText(bundle.getString("Phone.seguimiento_tesis_tfg_boton.text"));
+        titulo_primera_asignatura_impartida.setText(bundle.getString("Phone.titulo_primera_asignatura_impartida.text"));
+        texto_primera_asignatura_impartida.setText(bundle.getString("Phone.texto_primera_asignatura_impartida.text"));
+        curso_primera_asignatura_impartida.setText(bundle.getString("Phone.curso_primera_asignatura_impartida.text"));
+        titulo_segunda_asignatura_impartida.setText(bundle.getString("Phone.titulo_segunda_asignatura_impartida.text"));
+        curso_segunda_asignatura_impartida.setText(bundle.getString("Phone.curso_segunda_asignatura_impartida.text"));
+        titulo_primer_estudio.setText(bundle.getString("Phone.titulo_primer_estudio.text"));
+        titulo_segundo_estudio.setText(bundle.getString("Phone.titulo_segundo_estudio.text"));
+        titulo_segundo_estudio1.setText(bundle.getString("Phone.titulo_segundo_estudio1.text"));
+        titulo_primer_tfg.setText(bundle.getString("Phone.titulo_primer_tfg.text"));
+        
     }//GEN-LAST:event_espanol_botonActionPerformed
 
     private void ingles_botonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ingles_botonActionPerformed
         // TODO add your handling code here:
         currentLocale = new Locale("en", "GB");
         
-        ResourceBundle.getBundle("mobilephone2.bundle.Bundle", currentLocale);
+        ResourceBundle bundle = ResourceBundle.getBundle("mobilephone2.bundle.Bundle", currentLocale);
+        
+        Usuario_etiqueta.setText(bundle.getString("Phone.Usuario_etiqueta.text")); // NOI18N
+        
+        Usuario_campo.setText(bundle.getString("Phone.Usuario_campo.text")); // NOI18N
+
+        Contraseña_etiqueta.setText(bundle.getString("Phone.Contraseña_etiqueta.text")); // NOI18N
+
+        Contraseña_campo.setText(bundle.getString("Phone.Contraseña_campo.text")); // NOI18N
+
+        Mostrar_contraseña.setText(bundle.getString("Phone.Mostrar_contraseña.text")); // NOI18N
+
+        Password_olvidada.setText(bundle.getString("Phone.Password_olvidada.text")); // NOI18N
+
+        inicio_de_sesion.setText(bundle.getString("Phone.inicio_de_sesion.text")); // NOI18N
+
+        Selecione_idioma1.setText(bundle.getString("Phone.Selecione_idioma1.text")); // NOI18N
+        
+        Nombre.setText(bundle.getString("Phone.Nombre.text"));
+        
+        Acerca_de.setText(bundle.getString("Phone.Acerca_de.text"));      
+        
+        Moodle.setText(bundle.getString("Phone.Moodle.text"));
+        
+        Inicio.setText (bundle.getString("Phone.Inicio.text"));
+        
+        creditos_etiqueta.setText(bundle.getString("Phone.creditos_etiqueta.text"));
+        
+        escuela.setText(bundle.getString("Phone.escuela.text"));
+
+        titulo_primera.setText(bundle.getString("Phone.titulo_primera.text"));
+        convocatoria_primero.setText(bundle.getString("Phone.convocatoria_primero.text"));
+        titulo_segunda.setText(bundle.getString("Phone.titulo_segunda.text"));
+        convocatoria_segunda.setText(bundle.getString("Phone.convocatoria_segunda.text"));
+        consultar_matricula_boton.setText(bundle.getString("Phone.consultar_matricula_boton.text"));
+        consultar_abonare_boton.setText(bundle.getString("Phone.consultar_abonare_boton.text"));
+        consultar_grupo_grande_boton.setText(bundle.getString("Phone.consultar_grupo_grande_boton.text"));
+        consultar_grupo_practicas_boton.setText(bundle.getString("Phone.consultar_grupo_practicas_boton.text"));
+        titulo_primer.setText(bundle.getString("Phone.titulo_primer.text"));
+        titulo_segundo.setText(bundle.getString("Phone.titulo_segundo.text"));
+        titulo_primer_grupo.setText(bundle.getString("Phone.titulo_primer_grupo.text"));
+        titulo_segundo_grupo.setText(bundle.getString("Phone.titulo_segundo_grupo.text"));
+
+        consultar_horario_boton.setText(bundle.getString("Phone.consultar_horario_boton.text"));
+        informacion_grado_boton1.setText(bundle.getString("Phone.informacion_grado_boton1.text"));
+        titulo_primera_asignatura.setText(bundle.getString("Phone.titulo_primera_asignatura.text"));
+        titulo_segunda_asignatura.setText(bundle.getString("Phone.titulo_segunda_asignatura.text"));
+        curso_primera_asignatura.setText(bundle.getString("Phone.curso_primera_asignatura.text"));
+        
+        curso_primera_asignatura1.setText(bundle.getString("Phone.curso_primera_asignatura1.text"));
+        campus_docente_boton.setText(bundle.getString("Phone.campus_docente_boton.text"));
+        estudios_propios_boton.setText(bundle.getString("Phone.estudios_propios_boton.text"));
+        seguimiento_tesis_tfg_boton.setText(bundle.getString("Phone.seguimiento_tesis_tfg_boton.text"));
+        titulo_primera_asignatura_impartida.setText(bundle.getString("Phone.titulo_primera_asignatura_impartida.text"));
+        texto_primera_asignatura_impartida.setText(bundle.getString("Phone.texto_primera_asignatura_impartida.text"));
+        curso_primera_asignatura_impartida.setText(bundle.getString("Phone.curso_primera_asignatura_impartida.text"));
+        titulo_segunda_asignatura_impartida.setText(bundle.getString("Phone.titulo_segunda_asignatura_impartida.text"));
+        curso_segunda_asignatura_impartida.setText(bundle.getString("Phone.curso_segunda_asignatura_impartida.text"));
+        titulo_primer_estudio.setText(bundle.getString("Phone.titulo_primer_estudio.text"));
+        titulo_segundo_estudio.setText(bundle.getString("Phone.titulo_segundo_estudio.text"));
+        titulo_segundo_estudio1.setText(bundle.getString("Phone.titulo_segundo_estudio1.text"));
+        titulo_primer_tfg.setText(bundle.getString("Phone.titulo_primer_tfg.text"));
     }//GEN-LAST:event_ingles_botonActionPerformed
 
     private void frances_botonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_frances_botonActionPerformed
         // TODO add your handling code here:
         currentLocale = new Locale("fr", "FR");
 
-        ResourceBundle.getBundle("mobilephone2.bundle.Bundle", currentLocale);
+        ResourceBundle bundle = ResourceBundle.getBundle("mobilephone2.bundle.Bundle", currentLocale);
+        
+        Usuario_etiqueta.setText(bundle.getString("Phone.Usuario_etiqueta.text")); // NOI18N
+        
+        Usuario_campo.setText(bundle.getString("Phone.Usuario_campo.text")); // NOI18N
+
+        Contraseña_etiqueta.setText(bundle.getString("Phone.Contraseña_etiqueta.text")); // NOI18N
+
+        Contraseña_campo.setText(bundle.getString("Phone.Contraseña_campo.text")); // NOI18N
+
+        Mostrar_contraseña.setText(bundle.getString("Phone.Mostrar_contraseña.text")); // NOI18N
+
+        Password_olvidada.setText(bundle.getString("Phone.Password_olvidada.text")); // NOI18N
+
+        inicio_de_sesion.setText(bundle.getString("Phone.inicio_de_sesion.text")); // NOI18N
+
+        Selecione_idioma1.setText(bundle.getString("Phone.Selecione_idioma1.text")); // NOI18N
+        
+        Nombre.setText(bundle.getString("Phone.Nombre.text"));
+        
+        Acerca_de.setText(bundle.getString("Phone.Acerca_de.text"));      
+        
+        Moodle.setText(bundle.getString("Phone.Moodle.text"));
+        
+        Inicio.setText (bundle.getString("Phone.Inicio.text"));
+        
+        creditos_etiqueta.setText(bundle.getString("Phone.creditos_etiqueta.text"));
+        
+        escuela.setText(bundle.getString("Phone.escuela.text"));
+
+        titulo_primera.setText(bundle.getString("Phone.titulo_primera.text"));
+        convocatoria_primero.setText(bundle.getString("Phone.convocatoria_primero.text"));
+        titulo_segunda.setText(bundle.getString("Phone.titulo_segunda.text"));
+        convocatoria_segunda.setText(bundle.getString("Phone.convocatoria_segunda.text"));
+        consultar_matricula_boton.setText(bundle.getString("Phone.consultar_matricula_boton.text"));
+        consultar_abonare_boton.setText(bundle.getString("Phone.consultar_abonare_boton.text"));
+        consultar_grupo_grande_boton.setText(bundle.getString("Phone.consultar_grupo_grande_boton.text"));
+        consultar_grupo_practicas_boton.setText(bundle.getString("Phone.consultar_grupo_practicas_boton.text"));
+        titulo_primer.setText(bundle.getString("Phone.titulo_primer.text"));
+        titulo_segundo.setText(bundle.getString("Phone.titulo_segundo.text"));
+        titulo_primer_grupo.setText(bundle.getString("Phone.titulo_primer_grupo.text"));
+        titulo_segundo_grupo.setText(bundle.getString("Phone.titulo_segundo_grupo.text"));
+
+        consultar_horario_boton.setText(bundle.getString("Phone.consultar_horario_boton.text"));
+        informacion_grado_boton1.setText(bundle.getString("Phone.informacion_grado_boton1.text"));
+        titulo_primera_asignatura.setText(bundle.getString("Phone.titulo_primera_asignatura.text"));
+        titulo_segunda_asignatura.setText(bundle.getString("Phone.titulo_segunda_asignatura.text"));
+        curso_primera_asignatura.setText(bundle.getString("Phone.curso_primera_asignatura.text"));
+        
+        curso_primera_asignatura1.setText(bundle.getString("Phone.curso_primera_asignatura1.text"));
+        campus_docente_boton.setText(bundle.getString("Phone.campus_docente_boton.text"));
+        estudios_propios_boton.setText(bundle.getString("Phone.estudios_propios_boton.text"));
+        seguimiento_tesis_tfg_boton.setText(bundle.getString("Phone.seguimiento_tesis_tfg_boton.text"));
+        titulo_primera_asignatura_impartida.setText(bundle.getString("Phone.titulo_primera_asignatura_impartida.text"));
+        texto_primera_asignatura_impartida.setText(bundle.getString("Phone.texto_primera_asignatura_impartida.text"));
+        curso_primera_asignatura_impartida.setText(bundle.getString("Phone.curso_primera_asignatura_impartida.text"));
+        titulo_segunda_asignatura_impartida.setText(bundle.getString("Phone.titulo_segunda_asignatura_impartida.text"));
+        curso_segunda_asignatura_impartida.setText(bundle.getString("Phone.curso_segunda_asignatura_impartida.text"));
+        titulo_primer_estudio.setText(bundle.getString("Phone.titulo_primer_estudio.text"));
+        titulo_segundo_estudio.setText(bundle.getString("Phone.titulo_segundo_estudio.text"));
+        titulo_segundo_estudio1.setText(bundle.getString("Phone.titulo_segundo_estudio1.text"));
+        titulo_primer_tfg.setText(bundle.getString("Phone.titulo_primer_tfg.text"));
+        
+        
     }//GEN-LAST:event_frances_botonActionPerformed
 
     private void consultar_matricula_botonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consultar_matricula_botonActionPerformed
