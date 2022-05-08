@@ -54,6 +54,7 @@ public class Phone extends javax.swing.JFrame {
                             consultar_grupo_grande.setVisible(false);
                             consultar_grupo_practica.setVisible(false);
                             consultar_horario.setVisible(false);
+                                detalles_asignatura.setVisible(false);
                         interfaz_profesor.setVisible(false);
                             menu_profesor.setVisible(false);
                             cabecera_profesor.setVisible(false);
@@ -174,7 +175,14 @@ public class Phone extends javax.swing.JFrame {
         texto_segundo_grupo_mediano = new javax.swing.JLabel();
         grupo_fondo_segundo1 = new javax.swing.JLabel();
         consultar_horario = new javax.swing.JPanel();
+        detalles_asignatura = new javax.swing.JPanel();
+        cerrar_info_asignatura = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        ir_a_mapa = new javax.swing.JButton();
+        boton_asignatura = new javax.swing.JButton();
         horario = new javax.swing.JLabel();
+        mapa = new javax.swing.JPanel();
         informacion_grado = new javax.swing.JPanel();
         primera_asignatura_matricula = new javax.swing.JPanel();
         titulo_primera_asignatura = new javax.swing.JLabel();
@@ -1048,6 +1056,75 @@ public class Phone extends javax.swing.JFrame {
         consultar_horario.setName("consultar_horario"); // NOI18N
         consultar_horario.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        detalles_asignatura.setName("detalles_asignatura"); // NOI18N
+
+        cerrar_info_asignatura.setText(bundle.getString("Phone.cerrar_info_asignatura.text")); // NOI18N
+        cerrar_info_asignatura.setName("cerrar_info_asignatura"); // NOI18N
+        cerrar_info_asignatura.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cerrar_info_asignaturaActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setText(bundle.getString("Phone.jLabel1.text")); // NOI18N
+        jLabel1.setName("jLabel1"); // NOI18N
+
+        jLabel2.setText(bundle.getString("Phone.jLabel2.text")); // NOI18N
+        jLabel2.setName("jLabel2"); // NOI18N
+
+        ir_a_mapa.setText(bundle.getString("Phone.ir_a_mapa.text")); // NOI18N
+        ir_a_mapa.setName("ir_a_mapa"); // NOI18N
+        ir_a_mapa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ir_a_mapaActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout detalles_asignaturaLayout = new javax.swing.GroupLayout(detalles_asignatura);
+        detalles_asignatura.setLayout(detalles_asignaturaLayout);
+        detalles_asignaturaLayout.setHorizontalGroup(
+            detalles_asignaturaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(detalles_asignaturaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(detalles_asignaturaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, detalles_asignaturaLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(cerrar_info_asignatura))
+                    .addGroup(detalles_asignaturaLayout.createSequentialGroup()
+                        .addGroup(detalles_asignaturaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2)
+                            .addComponent(ir_a_mapa))
+                        .addGap(0, 8, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        detalles_asignaturaLayout.setVerticalGroup(
+            detalles_asignaturaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, detalles_asignaturaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel2)
+                .addGap(54, 54, 54)
+                .addComponent(ir_a_mapa)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
+                .addComponent(cerrar_info_asignatura)
+                .addContainerGap())
+        );
+
+        consultar_horario.add(detalles_asignatura, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, 320, 240));
+
+        boton_asignatura.setText(bundle.getString("Phone.boton_asignatura.text")); // NOI18N
+        boton_asignatura.setName("boton_asignatura"); // NOI18N
+        boton_asignatura.setBackground(new Color(0,0,0,0));
+        boton_asignatura.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton_asignaturaActionPerformed(evt);
+            }
+        });
+        consultar_horario.add(boton_asignatura, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 70, 300, 560));
+        boton_asignatura.getAccessibleContext().setAccessibleName(bundle.getString("Phone.boton_asignatura.AccessibleContext.accessibleName")); // NOI18N
+
         horario.setFont(new java.awt.Font("Ubuntu", 1, 48)); // NOI18N
         horario.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         horario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/horario.png"))); // NOI18N
@@ -1055,6 +1132,21 @@ public class Phone extends javax.swing.JFrame {
         horario.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         horario.setName("horario"); // NOI18N
         consultar_horario.add(horario, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 780));
+
+        mapa.setName("mapa"); // NOI18N
+
+        javax.swing.GroupLayout mapaLayout = new javax.swing.GroupLayout(mapa);
+        mapa.setLayout(mapaLayout);
+        mapaLayout.setHorizontalGroup(
+            mapaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        mapaLayout.setVerticalGroup(
+            mapaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 780, Short.MAX_VALUE)
+        );
+
+        consultar_horario.add(mapa, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 780));
 
         interfaz_alumno.add(consultar_horario, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 64, 400, 780));
         interfaz_alumno.setBackground(Color.WHITE);
@@ -1910,6 +2002,20 @@ public class Phone extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_MenuBotonCerrar1MouseClicked
 
+    private void boton_asignaturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton_asignaturaActionPerformed
+        // TODO add your handling code here:
+        detalles_asignatura.setVisible(true);
+    }//GEN-LAST:event_boton_asignaturaActionPerformed
+
+    private void cerrar_info_asignaturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cerrar_info_asignaturaActionPerformed
+        // TODO add your handling code here:
+        detalles_asignatura.setVisible(false);
+    }//GEN-LAST:event_cerrar_info_asignaturaActionPerformed
+
+    private void ir_a_mapaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ir_a_mapaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ir_a_mapaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -2004,9 +2110,11 @@ public class Phone extends javax.swing.JFrame {
     private javax.swing.JProgressBar barra_creditos;
     private javax.swing.JPanel barra_notificaciones;
     private javax.swing.JLabel bateria;
+    private javax.swing.JButton boton_asignatura;
     private javax.swing.JPanel cabecera_profesor;
     private javax.swing.JPanel campus_docente;
     private javax.swing.JButton campus_docente_boton;
+    private javax.swing.JButton cerrar_info_asignatura;
     private javax.swing.JPanel consultar_abonare;
     private javax.swing.JButton consultar_abonare_boton;
     private javax.swing.JPanel consultar_grupo_grande;
@@ -2026,6 +2134,7 @@ public class Phone extends javax.swing.JFrame {
     private javax.swing.JLabel curso_primera_asignatura1;
     private javax.swing.JLabel curso_primera_asignatura_impartida;
     private javax.swing.JLabel curso_segunda_asignatura_impartida;
+    private javax.swing.JPanel detalles_asignatura;
     private javax.swing.JLabel dibujo_primer_estudio;
     private javax.swing.JLabel dibujo_primer_tfg;
     private javax.swing.JLabel dibujo_segundo_estudio;
@@ -2067,8 +2176,12 @@ public class Phone extends javax.swing.JFrame {
     private javax.swing.JPanel inicio_sesion;
     private javax.swing.JPanel interfaz_alumno;
     private javax.swing.JPanel interfaz_profesor;
+    private javax.swing.JButton ir_a_mapa;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JPanel mapa;
     private javax.swing.JPanel menu_profesor;
     private javax.swing.JPanel movil;
     private javax.swing.JPanel pantalla_movil;
