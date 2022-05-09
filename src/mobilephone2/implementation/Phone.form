@@ -565,21 +565,19 @@
                                                       <Component id="Inicio_Imagen" min="-2" max="-2" attributes="0"/>
                                                       <Component id="Acerca_de_imagen" min="-2" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Group type="102" attributes="0">
-                                                          <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                                                          <Component id="Inicio" min="-2" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                      <Group type="102" alignment="1" attributes="0">
+                                                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                                          <Component id="Acerca_de" min="-2" pref="131" max="-2" attributes="0"/>
                                                       </Group>
                                                       <Group type="102" alignment="0" attributes="0">
                                                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                          <Component id="Moodle" min="-2" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <Group type="102" alignment="0" attributes="0">
-                                                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                                                          <Component id="Acerca_de" min="-2" max="-2" attributes="0"/>
+                                                          <Group type="103" groupAlignment="0" attributes="0">
+                                                              <Component id="Inicio" alignment="1" max="32767" attributes="0"/>
+                                                              <Component id="Moodle" max="32767" attributes="0"/>
+                                                          </Group>
                                                       </Group>
                                                   </Group>
-                                                  <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
                                               </Group>
                                               <Group type="102" alignment="1" attributes="0">
                                                   <Component id="Imagen" min="-2" max="-2" attributes="0"/>
@@ -587,7 +585,7 @@
                                                   <Component id="Nombre" min="-2" pref="130" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
-                                          <EmptySpace max="32767" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
                                           <Component id="Logout" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="1" attributes="0">
@@ -607,33 +605,30 @@
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="Imagen" min="-2" max="-2" attributes="0"/>
-                                      <Component id="Logout" min="-2" max="-2" attributes="0"/>
                                       <Component id="Nombre" min="-2" pref="50" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="32" pref="40" max="32767" attributes="0"/>
-                                  <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="Inicio_Imagen" min="-2" max="-2" attributes="0"/>
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <Component id="Inicio" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                                          <Component id="Logout" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="Moodle_imagen" min="-2" max="-2" attributes="0"/>
-                                      <Component id="Moodle" min="-2" max="-2" attributes="0"/>
-                                  </Group>
+                                  <EmptySpace min="32" pref="34" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" attributes="0">
+                                          <Component id="Inicio_Imagen" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                              <Component id="Moodle" max="32767" attributes="0"/>
+                                              <Component id="Moodle_imagen" max="32767" attributes="0"/>
+                                          </Group>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="Acerca_de_imagen" min="-2" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                              <Component id="Acerca_de" max="32767" attributes="0"/>
+                                              <Component id="Acerca_de_imagen" max="32767" attributes="0"/>
+                                          </Group>
                                       </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                                          <Component id="Acerca_de" min="-2" max="-2" attributes="0"/>
-                                      </Group>
+                                      <Component id="Inicio" min="-2" pref="24" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="573" max="32767" attributes="0"/>
+                                  <EmptySpace pref="579" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -717,6 +712,9 @@
                             </Property>
                             <Property name="name" type="java.lang.String" value="Moodle_imagen" noResource="true"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Moodle_imagenMouseClicked"/>
+                          </Events>
                         </Component>
                         <Component class="javax.swing.JLabel" name="Acerca_de">
                           <Properties>
@@ -2292,39 +2290,36 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="1" attributes="0">
-                                              <Component id="Moodle_imagen1" alignment="1" min="-2" max="-2" attributes="0"/>
-                                              <Component id="Inicio_Imagen1" alignment="1" min="-2" max="-2" attributes="0"/>
-                                              <Component id="Acerca_de_imagen1" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="Moodle1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="Inicio1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="Acerca_de1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                                          <Component id="Imagen1" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
+                                  <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                                  <Component id="Imagen1" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace min="0" pref="61" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="79" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="1" attributes="0">
                                       <Group type="102" alignment="1" attributes="0">
-                                          <Component id="Nombre1" min="-2" pref="130" max="-2" attributes="0"/>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="Nombre1" min="-2" pref="117" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
                                           <Component id="Logout1" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Component id="MenuBotonCerrar1" alignment="1" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="Moodle_imagen1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="Inicio_Imagen1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="Acerca_de_imagen1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="Moodle1" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="Inicio1" max="32767" attributes="0"/>
+                                      <Component id="Acerca_de1" pref="144" max="32767" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -2334,39 +2329,30 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="MenuBotonCerrar1" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="Acerca_de1" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <Group type="103" groupAlignment="1" attributes="0">
-                                              <Group type="102" alignment="1" attributes="0">
-                                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                      <Group type="102" alignment="0" attributes="0">
-                                                          <Component id="Imagen1" min="-2" max="-2" attributes="0"/>
-                                                          <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                                                          <Component id="Inicio_Imagen1" min="-2" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <Group type="102" alignment="0" attributes="0">
-                                                          <Group type="103" groupAlignment="0" attributes="0">
-                                                              <Component id="Nombre1" alignment="0" min="-2" pref="50" max="-2" attributes="0"/>
-                                                              <Group type="102" alignment="0" attributes="0">
-                                                                  <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
-                                                                  <Component id="Logout1" min="-2" max="-2" attributes="0"/>
-                                                              </Group>
-                                                          </Group>
-                                                          <EmptySpace max="32767" attributes="0"/>
-                                                          <Component id="Inicio1" min="-2" max="-2" attributes="0"/>
-                                                      </Group>
-                                                  </Group>
-                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Component id="Moodle_imagen1" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Component id="Moodle1" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                                          <Component id="Acerca_de_imagen1" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="Imagen1" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" attributes="0">
+                                          <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                                          <Component id="Logout1" min="-2" max="-2" attributes="0"/>
                                       </Group>
+                                      <Component id="Nombre1" min="-2" pref="50" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="567" max="32767" attributes="0"/>
+                                  <EmptySpace min="32" pref="45" max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="Inicio_Imagen1" max="32767" attributes="0"/>
+                                      <Component id="Inicio1" max="32767" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="Moodle1" max="32767" attributes="0"/>
+                                      <Component id="Moodle_imagen1" max="32767" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="Acerca_de_imagen1" max="32767" attributes="0"/>
+                                      <Component id="Acerca_de1" max="32767" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace pref="563" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -2439,6 +2425,9 @@
                             </Property>
                             <Property name="name" type="java.lang.String" value="Moodle1" noResource="true"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Moodle1MouseClicked"/>
+                          </Events>
                         </Component>
                         <Component class="javax.swing.JLabel" name="Moodle_imagen1">
                           <Properties>
@@ -2447,6 +2436,9 @@
                             </Property>
                             <Property name="name" type="java.lang.String" value="Moodle_imagen1" noResource="true"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Moodle_imagen1MouseClicked"/>
+                          </Events>
                         </Component>
                         <Component class="javax.swing.JLabel" name="Acerca_de1">
                           <Properties>

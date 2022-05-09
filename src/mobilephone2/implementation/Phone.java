@@ -555,6 +555,11 @@ public class Phone extends javax.swing.JFrame {
 
         Moodle_imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/moodle.png"))); // NOI18N
         Moodle_imagen.setName("Moodle_imagen"); // NOI18N
+        Moodle_imagen.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Moodle_imagenMouseClicked(evt);
+            }
+        });
 
         Acerca_de.setText(bundle.getString("Phone.Acerca_de.text")); // NOI18N
         Acerca_de.setName("Acerca_de"); // NOI18N
@@ -576,22 +581,20 @@ public class Phone extends javax.swing.JFrame {
                                     .addComponent(Moodle_imagen)
                                     .addComponent(Inicio_Imagen)
                                     .addComponent(Acerca_de_imagen))
-                                .addGroup(MenuAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(MenuAlumnoLayout.createSequentialGroup()
-                                        .addGap(20, 20, 20)
-                                        .addComponent(Inicio))
+                                .addGroup(MenuAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MenuAlumnoLayout.createSequentialGroup()
+                                        .addGap(18, 18, 18)
+                                        .addComponent(Acerca_de, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(MenuAlumnoLayout.createSequentialGroup()
                                         .addGap(18, 18, 18)
-                                        .addComponent(Moodle))
-                                    .addGroup(MenuAlumnoLayout.createSequentialGroup()
-                                        .addGap(18, 18, 18)
-                                        .addComponent(Acerca_de)))
-                                .addGap(79, 79, 79))
+                                        .addGroup(MenuAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(Inicio, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(Moodle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MenuAlumnoLayout.createSequentialGroup()
                                 .addComponent(Imagen)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(Logout))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MenuAlumnoLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
@@ -606,26 +609,24 @@ public class Phone extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(MenuAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Imagen)
-                    .addComponent(Logout)
-                    .addComponent(Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(32, 40, Short.MAX_VALUE)
-                .addGroup(MenuAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(Inicio_Imagen)
+                    .addComponent(Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(MenuAlumnoLayout.createSequentialGroup()
-                        .addComponent(Inicio)
-                        .addGap(8, 8, 8)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(MenuAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(Moodle_imagen)
-                    .addComponent(Moodle))
+                        .addGap(8, 8, 8)
+                        .addComponent(Logout)))
+                .addGap(32, 34, Short.MAX_VALUE)
                 .addGroup(MenuAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(MenuAlumnoLayout.createSequentialGroup()
+                        .addComponent(Inicio_Imagen)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(MenuAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(Moodle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(Moodle_imagen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
-                        .addComponent(Acerca_de_imagen))
-                    .addGroup(MenuAlumnoLayout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addComponent(Acerca_de)))
-                .addContainerGap(573, Short.MAX_VALUE))
+                        .addGroup(MenuAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(Acerca_de, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(Acerca_de_imagen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(Inicio, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(579, Short.MAX_VALUE))
         );
 
         interfaz_alumno.add(MenuAlumno, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 850));
@@ -1279,9 +1280,19 @@ public class Phone extends javax.swing.JFrame {
 
         Moodle1.setText(bundle.getString("Phone.Moodle1.text")); // NOI18N
         Moodle1.setName("Moodle1"); // NOI18N
+        Moodle1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Moodle1MouseClicked(evt);
+            }
+        });
 
         Moodle_imagen1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/moodle.png"))); // NOI18N
         Moodle_imagen1.setName("Moodle_imagen1"); // NOI18N
+        Moodle_imagen1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Moodle_imagen1MouseClicked(evt);
+            }
+        });
 
         Acerca_de1.setText(bundle.getString("Phone.Acerca_de1.text")); // NOI18N
         Acerca_de1.setName("Acerca_de1"); // NOI18N
@@ -1294,31 +1305,30 @@ public class Phone extends javax.swing.JFrame {
         menu_profesorLayout.setHorizontalGroup(
             menu_profesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(menu_profesorLayout.createSequentialGroup()
-                .addGroup(menu_profesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(menu_profesorLayout.createSequentialGroup()
-                        .addGap(39, 39, 39)
-                        .addGroup(menu_profesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(Moodle_imagen1)
-                            .addComponent(Inicio_Imagen1)
-                            .addComponent(Acerca_de_imagen1))
-                        .addGap(18, 18, 18)
-                        .addGroup(menu_profesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Moodle1)
-                            .addComponent(Inicio1)
-                            .addComponent(Acerca_de1)))
-                    .addGroup(menu_profesorLayout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addComponent(Imagen1)))
+                .addGap(21, 21, 21)
+                .addComponent(Imagen1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, menu_profesorLayout.createSequentialGroup()
-                .addGap(0, 61, Short.MAX_VALUE)
+                .addGap(0, 79, Short.MAX_VALUE)
                 .addGroup(menu_profesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(menu_profesorLayout.createSequentialGroup()
-                        .addComponent(Nombre1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(Nombre1, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(Logout1))
                     .addComponent(MenuBotonCerrar1))
                 .addGap(45, 45, 45))
+            .addGroup(menu_profesorLayout.createSequentialGroup()
+                .addGap(39, 39, 39)
+                .addGroup(menu_profesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(Moodle_imagen1)
+                    .addComponent(Inicio_Imagen1)
+                    .addComponent(Acerca_de_imagen1))
+                .addGap(18, 18, 18)
+                .addGroup(menu_profesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(Moodle1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Inicio1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Acerca_de1, javax.swing.GroupLayout.DEFAULT_SIZE, 144, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         menu_profesorLayout.setVerticalGroup(
             menu_profesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1326,30 +1336,25 @@ public class Phone extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(MenuBotonCerrar1)
                 .addGap(18, 18, 18)
-                .addGroup(menu_profesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(Acerca_de1)
+                .addGroup(menu_profesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Imagen1)
                     .addGroup(menu_profesorLayout.createSequentialGroup()
-                        .addGroup(menu_profesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(menu_profesorLayout.createSequentialGroup()
-                                .addGroup(menu_profesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(menu_profesorLayout.createSequentialGroup()
-                                        .addComponent(Imagen1)
-                                        .addGap(32, 32, 32)
-                                        .addComponent(Inicio_Imagen1))
-                                    .addGroup(menu_profesorLayout.createSequentialGroup()
-                                        .addGroup(menu_profesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(Nombre1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGroup(menu_profesorLayout.createSequentialGroup()
-                                                .addGap(9, 9, 9)
-                                                .addComponent(Logout1)))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(Inicio1)))
-                                .addGap(18, 18, 18)
-                                .addComponent(Moodle_imagen1))
-                            .addComponent(Moodle1))
-                        .addGap(28, 28, 28)
-                        .addComponent(Acerca_de_imagen1)))
-                .addContainerGap(567, Short.MAX_VALUE))
+                        .addGap(9, 9, 9)
+                        .addComponent(Logout1))
+                    .addComponent(Nombre1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(32, 45, Short.MAX_VALUE)
+                .addGroup(menu_profesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(Inicio_Imagen1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Inicio1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(menu_profesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(Moodle1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Moodle_imagen1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(menu_profesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(Acerca_de_imagen1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Acerca_de1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(563, Short.MAX_VALUE))
         );
 
         interfaz_profesor.add(menu_profesor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 280, 850));
@@ -1717,6 +1722,10 @@ public class Phone extends javax.swing.JFrame {
         informacion_grado_boton1.setEnabled(false);
         consultar_matricula_boton.setEnabled(false);
         boton_asignatura.setEnabled(false);
+        
+        consultar_abonare_boton.setEnabled(false);
+        consultar_grupo_grande_boton.setEnabled(false);
+        consultar_grupo_practicas_boton.setEnabled(false);
     }//GEN-LAST:event_MenuBotonMouseClicked
 
     private void MenuBotonCerrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MenuBotonCerrarMouseClicked
@@ -1727,7 +1736,11 @@ public class Phone extends javax.swing.JFrame {
         informacion_grado_boton1.setEnabled(true);
         consultar_matricula_boton.setEnabled(true);
         
-        boton_asignatura.setEnabled(false);
+        consultar_abonare_boton.setEnabled(true);
+        consultar_grupo_grande_boton.setEnabled(true);
+        consultar_grupo_practicas_boton.setEnabled(true);
+        
+        boton_asignatura.setEnabled(true);
     }//GEN-LAST:event_MenuBotonCerrarMouseClicked
 
     private void LogoutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LogoutMouseClicked
@@ -1822,6 +1835,7 @@ public class Phone extends javax.swing.JFrame {
         convocatoria_primero.setText(bundle.getString("Phone.convocatoria_primero.text"));
         titulo_segunda.setText(bundle.getString("Phone.titulo_segunda.text"));
         convocatoria_segunda.setText(bundle.getString("Phone.convocatoria_segunda.text"));
+        consultar_notas_boton.setText(bundle.getString("Phone.consultar_notas_boton.text"));
         consultar_matricula_boton.setText(bundle.getString("Phone.consultar_matricula_boton.text"));
         consultar_abonare_boton.setText(bundle.getString("Phone.consultar_abonare_boton.text"));
         consultar_grupo_grande_boton.setText(bundle.getString("Phone.consultar_grupo_grande_boton.text"));
@@ -1830,7 +1844,9 @@ public class Phone extends javax.swing.JFrame {
         titulo_segundo.setText(bundle.getString("Phone.titulo_segundo.text"));
         titulo_primer_grupo.setText(bundle.getString("Phone.titulo_primer_grupo.text"));
         titulo_segundo_grupo.setText(bundle.getString("Phone.titulo_segundo_grupo.text"));
-
+        
+        Grado_Ingenieria.setText(bundle.getString("Phone.Grado_Ingenieria.text"));
+        
         consultar_horario_boton.setText(bundle.getString("Phone.consultar_horario_boton.text"));
         informacion_grado_boton1.setText(bundle.getString("Phone.informacion_grado_boton1.text"));
         titulo_primera_asignatura.setText(bundle.getString("Phone.titulo_primera_asignatura.text"));
@@ -1851,6 +1867,16 @@ public class Phone extends javax.swing.JFrame {
         titulo_segundo_estudio1.setText(bundle.getString("Phone.titulo_segundo_estudio1.text"));
         titulo_primer_tfg.setText(bundle.getString("Phone.titulo_primer_tfg.text"));
         
+        cerrar_info_asignatura.setText(bundle.getString("Phone.cerrar_info_asignatura.text"));
+        jLabel1.setText(bundle.getString("Phone.jLabel1.text"));
+        jLabel2.setText(bundle.getString(" Phone.jLabel2.text"));
+        ir_a_mapa.setText(bundle.getString("Phone.ir_a_mapa.text"));
+        
+        Acerca_de1.setText(bundle.getString("Phone.Acerca_de1.text"));      
+        
+        Moodle1.setText(bundle.getString("Phone.Moodle1.text"));
+        
+        Inicio1.setText (bundle.getString("Phone.Inicio1.text"));
     }//GEN-LAST:event_espanol_botonActionPerformed
 
     private void ingles_botonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ingles_botonActionPerformed
@@ -1892,6 +1918,7 @@ public class Phone extends javax.swing.JFrame {
         titulo_segunda.setText(bundle.getString("Phone.titulo_segunda.text"));
         convocatoria_segunda.setText(bundle.getString("Phone.convocatoria_segunda.text"));
         consultar_matricula_boton.setText(bundle.getString("Phone.consultar_matricula_boton.text"));
+        consultar_notas_boton.setText(bundle.getString("Phone.consultar_notas_boton.text"));
         consultar_abonare_boton.setText(bundle.getString("Phone.consultar_abonare_boton.text"));
         consultar_grupo_grande_boton.setText(bundle.getString("Phone.consultar_grupo_grande_boton.text"));
         consultar_grupo_practicas_boton.setText(bundle.getString("Phone.consultar_grupo_practicas_boton.text"));
@@ -1899,7 +1926,10 @@ public class Phone extends javax.swing.JFrame {
         titulo_segundo.setText(bundle.getString("Phone.titulo_segundo.text"));
         titulo_primer_grupo.setText(bundle.getString("Phone.titulo_primer_grupo.text"));
         titulo_segundo_grupo.setText(bundle.getString("Phone.titulo_segundo_grupo.text"));
+        
+        Grado_Ingenieria.setText(bundle.getString("Phone.Grado_Ingenieria.text"));
 
+        
         consultar_horario_boton.setText(bundle.getString("Phone.consultar_horario_boton.text"));
         informacion_grado_boton1.setText(bundle.getString("Phone.informacion_grado_boton1.text"));
         titulo_primera_asignatura.setText(bundle.getString("Phone.titulo_primera_asignatura.text"));
@@ -1919,6 +1949,17 @@ public class Phone extends javax.swing.JFrame {
         titulo_segundo_estudio.setText(bundle.getString("Phone.titulo_segundo_estudio.text"));
         titulo_segundo_estudio1.setText(bundle.getString("Phone.titulo_segundo_estudio1.text"));
         titulo_primer_tfg.setText(bundle.getString("Phone.titulo_primer_tfg.text"));
+        
+        cerrar_info_asignatura.setText(bundle.getString("Phone.cerrar_info_asignatura.text"));
+        jLabel1.setText(bundle.getString("Phone.jLabel1.text"));
+        jLabel2.setText(bundle.getString(" Phone.jLabel2.text"));
+        ir_a_mapa.setText(bundle.getString("Phone.ir_a_mapa.text"));
+        
+        Acerca_de1.setText(bundle.getString("Phone.Acerca_de1.text"));      
+        
+        Moodle1.setText(bundle.getString("Phone.Moodle1.text"));
+        
+        Inicio1.setText (bundle.getString("Phone.Inicio1.text"));
     }//GEN-LAST:event_ingles_botonActionPerformed
 
     private void frances_botonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_frances_botonActionPerformed
@@ -1960,6 +2001,7 @@ public class Phone extends javax.swing.JFrame {
         titulo_segunda.setText(bundle.getString("Phone.titulo_segunda.text"));
         convocatoria_segunda.setText(bundle.getString("Phone.convocatoria_segunda.text"));
         consultar_matricula_boton.setText(bundle.getString("Phone.consultar_matricula_boton.text"));
+        consultar_notas_boton.setText(bundle.getString("Phone.consultar_notas_boton.text"));
         consultar_abonare_boton.setText(bundle.getString("Phone.consultar_abonare_boton.text"));
         consultar_grupo_grande_boton.setText(bundle.getString("Phone.consultar_grupo_grande_boton.text"));
         consultar_grupo_practicas_boton.setText(bundle.getString("Phone.consultar_grupo_practicas_boton.text"));
@@ -1967,7 +2009,9 @@ public class Phone extends javax.swing.JFrame {
         titulo_segundo.setText(bundle.getString("Phone.titulo_segundo.text"));
         titulo_primer_grupo.setText(bundle.getString("Phone.titulo_primer_grupo.text"));
         titulo_segundo_grupo.setText(bundle.getString("Phone.titulo_segundo_grupo.text"));
-
+        
+        Grado_Ingenieria.setText(bundle.getString("Phone.Grado_Ingenieria.text"));
+        
         consultar_horario_boton.setText(bundle.getString("Phone.consultar_horario_boton.text"));
         informacion_grado_boton1.setText(bundle.getString("Phone.informacion_grado_boton1.text"));
         titulo_primera_asignatura.setText(bundle.getString("Phone.titulo_primera_asignatura.text"));
@@ -1988,13 +2032,26 @@ public class Phone extends javax.swing.JFrame {
         titulo_segundo_estudio1.setText(bundle.getString("Phone.titulo_segundo_estudio1.text"));
         titulo_primer_tfg.setText(bundle.getString("Phone.titulo_primer_tfg.text"));
         
+        cerrar_info_asignatura.setText(bundle.getString("Phone.cerrar_info_asignatura.text"));
+        jLabel1.setText(bundle.getString("Phone.jLabel1.text"));
+        jLabel2.setText(bundle.getString(" Phone.jLabel2.text"));
+        ir_a_mapa.setText(bundle.getString("Phone.ir_a_mapa.text"));
         
+        Acerca_de1.setText(bundle.getString("Phone.Acerca_de1.text"));      
+        
+        Moodle1.setText(bundle.getString("Phone.Moodle1.text"));
+        
+        Inicio1.setText (bundle.getString("Phone.Inicio1.text"));
     }//GEN-LAST:event_frances_botonActionPerformed
 
     private void consultar_matricula_botonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consultar_matricula_botonActionPerformed
         // TODO add your handling code here:
         seleccion.setVisible(false);
         consultar_matricula.setVisible(true);
+        
+        consultar_abonare_boton.setEnabled(true);
+        consultar_grupo_grande_boton.setEnabled(true);
+        consultar_grupo_practicas_boton.setEnabled(true);
     }//GEN-LAST:event_consultar_matricula_botonActionPerformed
 
     private void consultar_abonare_botonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consultar_abonare_botonActionPerformed
@@ -2064,6 +2121,10 @@ public class Phone extends javax.swing.JFrame {
         campus_docente_boton.setEnabled(true);
         estudios_propios_boton.setEnabled(true);
         seguimiento_tesis_tfg_boton.setEnabled(true);
+        
+        campus_docente.setVisible(false);
+        estudios_propios.setVisible(false);
+        seguimiento_tesis_tfg.setVisible(false);
     }//GEN-LAST:event_Inicio_Imagen1MouseClicked
 
     private void Inicio1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Inicio1MouseClicked
@@ -2075,12 +2136,22 @@ public class Phone extends javax.swing.JFrame {
         campus_docente_boton.setEnabled(true);
         estudios_propios_boton.setEnabled(true);
         seguimiento_tesis_tfg_boton.setEnabled(true);
+        
+        campus_docente.setVisible(false);
+        estudios_propios.setVisible(false);
+        seguimiento_tesis_tfg.setVisible(false);
     }//GEN-LAST:event_Inicio1MouseClicked
 
     private void Logout1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Logout1MouseClicked
         // TODO add your handling code here:
         menu_profesor.setVisible(false);
-        
+            interfaz_profesor.setVisible(false);
+            menu_profesor.setVisible(false);
+            cabecera_profesor.setVisible(false);
+            seleccion_profesor.setVisible(false);
+            campus_docente.setVisible(false);
+            estudios_propios.setVisible(false);
+            seguimiento_tesis_tfg.setVisible(false);
         inicio_sesion.setVisible(true);
     }//GEN-LAST:event_Logout1MouseClicked
 
@@ -2096,11 +2167,17 @@ public class Phone extends javax.swing.JFrame {
     private void boton_asignaturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton_asignaturaActionPerformed
         // TODO add your handling code here:
         detalles_asignatura.setVisible(true);
+        boton_asignatura.setEnabled(false);
+        
+        MenuBoton.setVisible(false);
     }//GEN-LAST:event_boton_asignaturaActionPerformed
 
     private void cerrar_info_asignaturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cerrar_info_asignaturaActionPerformed
         // TODO add your handling code here:
         detalles_asignatura.setVisible(false);
+        boton_asignatura.setEnabled(true);
+        
+        MenuBoton.setVisible(true);
     }//GEN-LAST:event_cerrar_info_asignaturaActionPerformed
 
     private void ir_a_mapaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ir_a_mapaActionPerformed
@@ -2123,6 +2200,57 @@ public class Phone extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_MoodleMouseClicked
+
+    private void Moodle_imagenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Moodle_imagenMouseClicked
+        // TODO add your handling code here:
+        if(java.awt.Desktop.isDesktopSupported())
+        {
+            java.awt.Desktop desktop = java.awt.Desktop.getDesktop();
+            
+            if (desktop.isSupported(java.awt.Desktop.Action.BROWSE))
+            {
+                try
+                {
+                    java.net.URI uri = new java.net.URI("https://moodle.uco.es/m2122/");
+                    desktop.browse(uri);
+                }catch( URISyntaxException | IOException ex ){}
+            }
+        }
+    }//GEN-LAST:event_Moodle_imagenMouseClicked
+
+    private void Moodle_imagen1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Moodle_imagen1MouseClicked
+        // TODO add your handling code here:
+        if(java.awt.Desktop.isDesktopSupported())
+        {
+            java.awt.Desktop desktop = java.awt.Desktop.getDesktop();
+            
+            if (desktop.isSupported(java.awt.Desktop.Action.BROWSE))
+            {
+                try
+                {
+                    java.net.URI uri = new java.net.URI("https://moodle.uco.es/m2122/");
+                    desktop.browse(uri);
+                }catch( URISyntaxException | IOException ex ){}
+            }
+        }
+    }//GEN-LAST:event_Moodle_imagen1MouseClicked
+
+    private void Moodle1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Moodle1MouseClicked
+        // TODO add your handling code here:
+        if(java.awt.Desktop.isDesktopSupported())
+        {
+            java.awt.Desktop desktop = java.awt.Desktop.getDesktop();
+            
+            if (desktop.isSupported(java.awt.Desktop.Action.BROWSE))
+            {
+                try
+                {
+                    java.net.URI uri = new java.net.URI("https://moodle.uco.es/m2122/");
+                    desktop.browse(uri);
+                }catch( URISyntaxException | IOException ex ){}
+            }
+        }
+    }//GEN-LAST:event_Moodle1MouseClicked
 
     /**
      * @param args the command line arguments
