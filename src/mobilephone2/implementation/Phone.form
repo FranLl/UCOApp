@@ -254,31 +254,10 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jSeparator1" alignment="1" min="-2" pref="420" max="-2" attributes="0"/>
                                   <Component id="jSeparator2" alignment="1" min="-2" pref="420" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="Selecione_idioma1" min="-2" pref="215" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="Logo_UCO" min="-2" pref="201" max="-2" attributes="0"/>
-                                              <Component id="Mostrar_contraseña" min="-2" pref="202" max="-2" attributes="0"/>
-                                              <Component id="Password_olvidada" min="-2" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="1" attributes="0">
-                                                  <Component id="Usuario_etiqueta" min="-2" pref="202" max="-2" attributes="0"/>
-                                                  <Component id="Usuario_campo" min="-2" pref="202" max="-2" attributes="0"/>
-                                                  <Component id="Contraseña_etiqueta" min="-2" pref="202" max="-2" attributes="0"/>
-                                                  <Component id="Contraseña_campo" min="-2" pref="202" max="-2" attributes="0"/>
-                                              </Group>
-                                          </Group>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="103" max="-2" attributes="0"/>
-                                  </Group>
                               </Group>
                           </Group>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="147" max="-2" attributes="0"/>
-                                      <Component id="inicio_de_sesion" min="-2" pref="126" max="-2" attributes="0"/>
-                                  </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                                       <Component id="espanol_boton" min="-2" pref="89" max="-2" attributes="0"/>
@@ -286,6 +265,23 @@
                                       <Component id="ingles_boton" min="-2" pref="86" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                                       <Component id="frances_boton" min="-2" pref="86" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="94" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="Usuario_etiqueta" min="-2" pref="202" max="-2" attributes="0"/>
+                                          <Component id="Logo_UCO" min="-2" pref="201" max="-2" attributes="0"/>
+                                          <Component id="Usuario_campo" alignment="0" min="-2" pref="202" max="-2" attributes="0"/>
+                                          <Component id="Contraseña_etiqueta" alignment="0" min="-2" pref="202" max="-2" attributes="0"/>
+                                          <Component id="Contraseña_campo" alignment="0" min="-2" pref="202" max="-2" attributes="0"/>
+                                          <Component id="Password_olvidada" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="Mostrar_contraseña" alignment="0" min="-2" pref="202" max="-2" attributes="0"/>
+                                          <Component id="Selecione_idioma1" alignment="0" min="-2" pref="215" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="139" max="-2" attributes="0"/>
+                                      <Component id="inicio_de_sesion" min="-2" pref="126" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
@@ -313,7 +309,7 @@
                               <Component id="Mostrar_contraseña" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                               <Component id="inicio_de_sesion" min="-2" pref="49" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
+                              <EmptySpace pref="86" max="32767" attributes="0"/>
                               <Component id="Selecione_idioma1" min="-2" pref="21" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
@@ -321,7 +317,7 @@
                                   <Component id="ingles_boton" alignment="3" min="-2" pref="63" max="-2" attributes="0"/>
                                   <Component id="frances_boton" alignment="3" min="-2" pref="63" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace max="32767" attributes="0"/>
+                              <EmptySpace pref="87" max="32767" attributes="0"/>
                               <Component id="jSeparator1" min="-2" pref="10" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
                           </Group>
@@ -710,6 +706,9 @@
                             </Property>
                             <Property name="name" type="java.lang.String" value="Moodle" noResource="true"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="MoodleMouseClicked"/>
+                          </Events>
                         </Component>
                         <Component class="javax.swing.JLabel" name="Moodle_imagen">
                           <Properties>
@@ -818,24 +817,21 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
                                           <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
                                           <Component id="Logo_UCO1" min="-2" pref="201" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="1" attributes="0">
-                                              <Component id="consultar_horario_boton" min="-2" pref="130" max="-2" attributes="0"/>
-                                              <Component id="consultar_notas_boton" min="-2" pref="130" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="1" attributes="0">
-                                              <Component id="consultar_matricula_boton" min="-2" pref="130" max="-2" attributes="0"/>
-                                              <Component id="informacion_grado_boton1" min="-2" pref="130" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                              <Component id="consultar_matricula_boton" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="consultar_notas_boton" max="32767" attributes="0"/>
+                                              <Component id="consultar_horario_boton" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="informacion_grado_boton1" pref="303" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
-                                  <EmptySpace pref="75" max="32767" attributes="0"/>
+                                  <EmptySpace pref="64" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -844,17 +840,15 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
                                   <Component id="Logo_UCO1" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="125" max="32767" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="consultar_matricula_boton" alignment="3" min="-2" pref="110" max="-2" attributes="0"/>
-                                      <Component id="consultar_notas_boton" alignment="3" min="-2" pref="110" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="informacion_grado_boton1" alignment="3" min="-2" pref="110" max="-2" attributes="0"/>
-                                      <Component id="consultar_horario_boton" alignment="3" min="-2" pref="110" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="223" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="consultar_notas_boton" min="-2" pref="110" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="consultar_matricula_boton" min="-2" pref="110" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="consultar_horario_boton" min="-2" pref="110" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="informacion_grado_boton1" min="-2" pref="110" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="131" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -1896,9 +1890,9 @@
                                           </Group>
                                           <Group type="102" attributes="0">
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="jLabel1" alignment="0" min="-2" pref="288" max="-2" attributes="0"/>
                                                   <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
                                                   <Component id="ir_a_mapa" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabel1" alignment="0" min="-2" pref="288" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace min="0" pref="8" max="32767" attributes="0"/>
                                           </Group>
@@ -2535,24 +2529,23 @@
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
-                                          <Component id="Logo_UCO3" min="-2" pref="201" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                                          <Component id="campus_docente_boton" min="-2" pref="130" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
-                                          <Component id="estudios_propios_boton" min="-2" pref="130" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="125" max="-2" attributes="0"/>
-                                          <Component id="seguimiento_tesis_tfg_boton" min="-2" pref="130" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="seguimiento_tesis_tfg_boton" min="-2" pref="353" max="-2" attributes="0"/>
+                                      <Component id="estudios_propios_boton" min="-2" pref="353" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
+                                              <Component id="Logo_UCO3" min="-2" pref="201" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                                              <Component id="campus_docente_boton" min="-2" pref="353" max="-2" attributes="0"/>
+                                          </Group>
                                       </Group>
                                   </Group>
-                                  <EmptySpace pref="57" max="32767" attributes="0"/>
+                                  <EmptySpace pref="32" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -2561,14 +2554,13 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
                                   <Component id="Logo_UCO3" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="187" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="campus_docente_boton" alignment="3" min="-2" pref="110" max="-2" attributes="0"/>
-                                      <Component id="estudios_propios_boton" alignment="3" min="-2" pref="110" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="campus_docente_boton" min="-2" pref="110" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="estudios_propios_boton" min="-2" pref="110" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="seguimiento_tesis_tfg_boton" min="-2" pref="110" max="-2" attributes="0"/>
-                                  <EmptySpace pref="165" max="32767" attributes="0"/>
+                                  <EmptySpace pref="227" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
