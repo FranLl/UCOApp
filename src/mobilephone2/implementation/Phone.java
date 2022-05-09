@@ -30,13 +30,13 @@ public class Phone extends javax.swing.JFrame {
     public Phone() {
         //setUndecorated(true);
         //Obtener Locale por defecto
-        //currentLocale = new Locale("fr", "FR");
+        currentLocale = new Locale("es", "ES");
 
         //Obtener idioma y país de Locale
-        //currentLocale.getLanguage();
-        //currentLocale.getCountry();
+        currentLocale.getLanguage();
+        currentLocale.getCountry();
 
-        //ResourceBundle.getBundle("mobilephone2.bundle.Bundle", currentLocale);
+        ResourceBundle.getBundle("mobilephone2.bundle.Bundle", currentLocale);
         
         initComponents();
         //setBackground(new Color(0,0,0,0));
@@ -1534,23 +1534,24 @@ public class Phone extends javax.swing.JFrame {
 
         titulo_primer_estudio.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
         titulo_primer_estudio.setText(bundle.getString("Phone.titulo_primer_estudio.text")); // NOI18N
+        titulo_primer_estudio.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         titulo_primer_estudio.setName("titulo_primer_estudio"); // NOI18N
-        primer_estudio.add(titulo_primer_estudio, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, -1, -1));
+        primer_estudio.add(titulo_primer_estudio, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 0, 310, 80));
 
         dibujo_primer_estudio.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
         dibujo_primer_estudio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/CCNA1.png"))); // NOI18N
         dibujo_primer_estudio.setText(bundle.getString("Phone.dibujo_primer_estudio.text")); // NOI18N
         dibujo_primer_estudio.setName("dibujo_primer_estudio"); // NOI18N
-        primer_estudio.add(dibujo_primer_estudio, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, 20));
+        primer_estudio.add(dibujo_primer_estudio, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, 20));
 
         fondo_primer_estudio.setBackground(new java.awt.Color(255, 255, 0));
         fondo_primer_estudio.setFont(new java.awt.Font("Ubuntu", 1, 24)); // NOI18N
         fondo_primer_estudio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/grey_circle.png"))); // NOI18N
         fondo_primer_estudio.setText(bundle.getString("Phone.fondo_primer_estudio.text")); // NOI18N
         fondo_primer_estudio.setName("fondo_primer_estudio"); // NOI18N
-        primer_estudio.add(fondo_primer_estudio, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 40, 45));
+        primer_estudio.add(fondo_primer_estudio, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 40, 50));
 
-        estudios_propios.add(primer_estudio, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 400, 60));
+        estudios_propios.add(primer_estudio, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 400, 80));
 
         segundo_estudio.setName("segundo_estudio"); // NOI18N
         segundo_estudio.setOpaque(false);
@@ -1559,22 +1560,23 @@ public class Phone extends javax.swing.JFrame {
         titulo_segundo_estudio.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
         titulo_segundo_estudio.setText(bundle.getString("Phone.titulo_segundo_estudio.text")); // NOI18N
         titulo_segundo_estudio.setName("titulo_segundo_estudio"); // NOI18N
-        segundo_estudio.add(titulo_segundo_estudio, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, -1, -1));
+        segundo_estudio.add(titulo_segundo_estudio, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 0, 300, 90));
+        titulo_segundo_estudio.getAccessibleContext().setAccessibleName(bundle.getString("Phone.titulo_segundo_estudio.AccessibleContext.accessibleName")); // NOI18N
 
         dibujo_segundo_estudio.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
         dibujo_segundo_estudio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/CCNA2.png"))); // NOI18N
         dibujo_segundo_estudio.setText(bundle.getString("Phone.dibujo_segundo_estudio.text")); // NOI18N
         dibujo_segundo_estudio.setName("dibujo_segundo_estudio"); // NOI18N
-        segundo_estudio.add(dibujo_segundo_estudio, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, 20));
+        segundo_estudio.add(dibujo_segundo_estudio, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, 20));
 
         fondo_segundo_estudio.setBackground(new java.awt.Color(255, 255, 0));
         fondo_segundo_estudio.setFont(new java.awt.Font("Ubuntu", 1, 24)); // NOI18N
         fondo_segundo_estudio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/grey_circle.png"))); // NOI18N
         fondo_segundo_estudio.setText(bundle.getString("Phone.fondo_segundo_estudio.text")); // NOI18N
         fondo_segundo_estudio.setName("fondo_segundo_estudio"); // NOI18N
-        segundo_estudio.add(fondo_segundo_estudio, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 40, 45));
+        segundo_estudio.add(fondo_segundo_estudio, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 40, 45));
 
-        estudios_propios.add(segundo_estudio, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 400, 60));
+        estudios_propios.add(segundo_estudio, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 400, 90));
 
         Logo_UCO6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/logo_uco_small.png"))); // NOI18N
         Logo_UCO6.setText(bundle.getString("Phone.Logo_UCO6.text")); // NOI18N
@@ -1595,22 +1597,23 @@ public class Phone extends javax.swing.JFrame {
         titulo_primer_tfg.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
         titulo_primer_tfg.setText(bundle.getString("Phone.titulo_primer_tfg.text")); // NOI18N
         titulo_primer_tfg.setName("titulo_primer_tfg"); // NOI18N
-        primer_tfg.add(titulo_primer_tfg, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, -1, -1));
+        primer_tfg.add(titulo_primer_tfg, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 0, 300, 90));
+        titulo_primer_tfg.getAccessibleContext().setAccessibleName(bundle.getString("Phone.titulo_primer_tfg.AccessibleContext.accessibleName")); // NOI18N
 
         dibujo_primer_tfg.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
         dibujo_primer_tfg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/CCNA1.png"))); // NOI18N
         dibujo_primer_tfg.setText(bundle.getString("Phone.dibujo_primer_tfg.text")); // NOI18N
         dibujo_primer_tfg.setName("dibujo_primer_tfg"); // NOI18N
-        primer_tfg.add(dibujo_primer_tfg, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, 20));
+        primer_tfg.add(dibujo_primer_tfg, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, -1, 20));
 
         fondo_primer_estudio1.setBackground(new java.awt.Color(255, 255, 0));
         fondo_primer_estudio1.setFont(new java.awt.Font("Ubuntu", 1, 24)); // NOI18N
         fondo_primer_estudio1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/grey_circle.png"))); // NOI18N
         fondo_primer_estudio1.setText(bundle.getString("Phone.fondo_primer_estudio1.text")); // NOI18N
         fondo_primer_estudio1.setName("fondo_primer_estudio1"); // NOI18N
-        primer_tfg.add(fondo_primer_estudio1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 40, 45));
+        primer_tfg.add(fondo_primer_estudio1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 40, 45));
 
-        seguimiento_tesis_tfg.add(primer_tfg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 400, 60));
+        seguimiento_tesis_tfg.add(primer_tfg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 400, 100));
 
         segundo_estudio1.setName("segundo_estudio1"); // NOI18N
         segundo_estudio1.setOpaque(false);
@@ -1619,22 +1622,23 @@ public class Phone extends javax.swing.JFrame {
         titulo_segundo_estudio1.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
         titulo_segundo_estudio1.setText(bundle.getString("Phone.titulo_segundo_estudio1.text")); // NOI18N
         titulo_segundo_estudio1.setName("titulo_segundo_estudio1"); // NOI18N
-        segundo_estudio1.add(titulo_segundo_estudio1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, -1, -1));
+        segundo_estudio1.add(titulo_segundo_estudio1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, 290, 110));
+        titulo_segundo_estudio1.getAccessibleContext().setAccessibleName(bundle.getString("Phone.titulo_segundo_estudio1")); // NOI18N
 
         dibujo_segundo_estudio1.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
         dibujo_segundo_estudio1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/CCNA2.png"))); // NOI18N
         dibujo_segundo_estudio1.setText(bundle.getString("Phone.dibujo_segundo_estudio1.text")); // NOI18N
         dibujo_segundo_estudio1.setName("dibujo_segundo_estudio1"); // NOI18N
-        segundo_estudio1.add(dibujo_segundo_estudio1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, 20));
+        segundo_estudio1.add(dibujo_segundo_estudio1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, -1, 20));
 
         fondo_segundo_estudio1.setBackground(new java.awt.Color(255, 255, 0));
         fondo_segundo_estudio1.setFont(new java.awt.Font("Ubuntu", 1, 24)); // NOI18N
         fondo_segundo_estudio1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/grey_circle.png"))); // NOI18N
         fondo_segundo_estudio1.setText(bundle.getString("Phone.fondo_segundo_estudio1.text")); // NOI18N
         fondo_segundo_estudio1.setName("fondo_segundo_estudio1"); // NOI18N
-        segundo_estudio1.add(fondo_segundo_estudio1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 40, 45));
+        segundo_estudio1.add(fondo_segundo_estudio1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 40, 45));
 
-        seguimiento_tesis_tfg.add(segundo_estudio1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 400, 60));
+        seguimiento_tesis_tfg.add(segundo_estudio1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 310, 400, 120));
 
         Logo_UCO7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/logo_uco_small.png"))); // NOI18N
         Logo_UCO7.setText(bundle.getString("Phone.Logo_UCO7.text")); // NOI18N
@@ -1663,11 +1667,16 @@ public class Phone extends javax.swing.JFrame {
         
         inicio_sesion.setVisible(false);
         
-        if(campo.equals("Alumno1"))
+        if(campo.equals("p82izraj"))
         {
             interfaz_alumno.setVisible(true);
+            
+            consultar_notas_boton.setEnabled(true);
+            consultar_horario_boton.setEnabled(true);
+            informacion_grado_boton1.setEnabled(true);
+            consultar_matricula_boton.setEnabled(true);
         }
-        else if (campo.equals("Profesor1"))
+        else if (campo.equals("cc2llnuf"))
         {
             interfaz_profesor.setVisible(true);
             cabecera_profesor.setVisible(true);
@@ -1675,6 +1684,8 @@ public class Phone extends javax.swing.JFrame {
         }
         Header.setVisible(true);
         seleccion.setVisible(true);
+        
+        
     }//GEN-LAST:event_inicio_de_sesionActionPerformed
 
     private void Mostrar_contraseñaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Mostrar_contraseñaActionPerformed
@@ -1691,11 +1702,20 @@ public class Phone extends javax.swing.JFrame {
 
     private void MenuBotonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MenuBotonMouseClicked
         MenuAlumno.setVisible(true);
-        /////////////ESTOY AQUI
+        
+        consultar_notas_boton.setEnabled(false);
+        consultar_horario_boton.setEnabled(false);
+        informacion_grado_boton1.setEnabled(false);
+        consultar_matricula_boton.setEnabled(false);
     }//GEN-LAST:event_MenuBotonMouseClicked
 
     private void MenuBotonCerrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MenuBotonCerrarMouseClicked
         MenuAlumno.setVisible(false);
+        
+        consultar_notas_boton.setEnabled(true);
+        consultar_horario_boton.setEnabled(true);
+        informacion_grado_boton1.setEnabled(true);
+        consultar_matricula_boton.setEnabled(true);
     }//GEN-LAST:event_MenuBotonCerrarMouseClicked
 
     private void LogoutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LogoutMouseClicked
@@ -1984,14 +2004,20 @@ public class Phone extends javax.swing.JFrame {
 
     private void seguimiento_tesis_tfg_botonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seguimiento_tesis_tfg_botonActionPerformed
         // TODO add your handling code here:
+        seleccion_profesor.setVisible(false);
+        seguimiento_tesis_tfg.setVisible(true);
     }//GEN-LAST:event_seguimiento_tesis_tfg_botonActionPerformed
 
     private void estudios_propios_botonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_estudios_propios_botonActionPerformed
         // TODO add your handling code here:
+        seleccion_profesor.setVisible(false);
+        estudios_propios.setVisible(true);
     }//GEN-LAST:event_estudios_propios_botonActionPerformed
 
     private void campus_docente_botonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campus_docente_botonActionPerformed
         // TODO add your handling code here:
+        seleccion_profesor.setVisible(false);
+        campus_docente.setVisible(true);
     }//GEN-LAST:event_campus_docente_botonActionPerformed
 
     private void MenuBoton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MenuBoton1MouseClicked
