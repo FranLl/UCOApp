@@ -151,6 +151,7 @@ public class Phone extends javax.swing.JFrame {
         consultar_grupo_grande_boton = new javax.swing.JButton();
         consultar_grupo_practicas_boton = new javax.swing.JButton();
         consultar_abonare = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
         PDF = new javax.swing.JLabel();
         consultar_grupo_grande = new javax.swing.JPanel();
         primer_grupo = new javax.swing.JPanel();
@@ -892,6 +893,11 @@ public class Phone extends javax.swing.JFrame {
         consultar_abonare.setBackground(new java.awt.Color(255, 255, 255));
         consultar_abonare.setName("consultar_abonare"); // NOI18N
         consultar_abonare.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/download.png"))); // NOI18N
+        jLabel3.setText(bundle.getString("Phone.jLabel3.text")); // NOI18N
+        jLabel3.setName("jLabel3"); // NOI18N
+        consultar_abonare.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 600, -1, -1));
 
         PDF.setFont(new java.awt.Font("Ubuntu", 1, 48)); // NOI18N
         PDF.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -2281,6 +2287,7 @@ public class Phone extends javax.swing.JFrame {
     private javax.swing.JButton ir_a_mapa;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JPanel mapa;
