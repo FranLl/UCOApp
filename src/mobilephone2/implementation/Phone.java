@@ -1435,8 +1435,7 @@ public class Phone extends javax.swing.JFrame {
                     .addGroup(seleccion_profesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(seleccion_profesorLayout.createSequentialGroup()
                             .addGap(84, 84, 84)
-                            .addComponent(Logo_UCO3, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(68, 68, 68))
+                            .addComponent(Logo_UCO3, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(seleccion_profesorLayout.createSequentialGroup()
                             .addGap(25, 25, 25)
                             .addComponent(campus_docente_boton, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE))))
@@ -1681,6 +1680,10 @@ public class Phone extends javax.swing.JFrame {
             interfaz_profesor.setVisible(true);
             cabecera_profesor.setVisible(true);
             seleccion_profesor.setVisible(true);
+            
+            campus_docente_boton.setEnabled(true);
+            estudios_propios_boton.setEnabled(true);
+            seguimiento_tesis_tfg_boton.setEnabled(true);
         }
         Header.setVisible(true);
         seleccion.setVisible(true);
@@ -2022,22 +2025,48 @@ public class Phone extends javax.swing.JFrame {
 
     private void MenuBoton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MenuBoton1MouseClicked
         // TODO add your handling code here:
+        menu_profesor.setVisible(true);
+        
+        campus_docente_boton.setEnabled(false);
+        estudios_propios_boton.setEnabled(false);
+        seguimiento_tesis_tfg_boton.setEnabled(false);
     }//GEN-LAST:event_MenuBoton1MouseClicked
 
     private void Inicio_Imagen1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Inicio_Imagen1MouseClicked
         // TODO add your handling code here:
+        menu_profesor.setVisible(false);
+        seleccion_profesor.setVisible(true);
+        
+        campus_docente_boton.setEnabled(true);
+        estudios_propios_boton.setEnabled(true);
+        seguimiento_tesis_tfg_boton.setEnabled(true);
     }//GEN-LAST:event_Inicio_Imagen1MouseClicked
 
     private void Inicio1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Inicio1MouseClicked
         // TODO add your handling code here:
+              
+        menu_profesor.setVisible(false);
+        seleccion_profesor.setVisible(true);
+        
+        campus_docente_boton.setEnabled(true);
+        estudios_propios_boton.setEnabled(true);
+        seguimiento_tesis_tfg_boton.setEnabled(true);
     }//GEN-LAST:event_Inicio1MouseClicked
 
     private void Logout1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Logout1MouseClicked
         // TODO add your handling code here:
+        menu_profesor.setVisible(false);
+        
+        inicio_sesion.setVisible(true);
     }//GEN-LAST:event_Logout1MouseClicked
 
     private void MenuBotonCerrar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MenuBotonCerrar1MouseClicked
         // TODO add your handling code here:
+        menu_profesor.setVisible(false);
+        
+        campus_docente_boton.setEnabled(true);
+        estudios_propios_boton.setEnabled(true);
+        seguimiento_tesis_tfg_boton.setEnabled(true);
     }//GEN-LAST:event_MenuBotonCerrar1MouseClicked
 
     private void boton_asignaturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton_asignaturaActionPerformed

@@ -2537,7 +2537,6 @@
                                           <Group type="102" attributes="0">
                                               <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
                                               <Component id="Logo_UCO3" min="-2" pref="201" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
                                               <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
