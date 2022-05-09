@@ -1710,6 +1710,7 @@ public class Phone extends javax.swing.JFrame {
         consultar_horario_boton.setEnabled(false);
         informacion_grado_boton1.setEnabled(false);
         consultar_matricula_boton.setEnabled(false);
+        boton_asignatura.setEnabled(false);
     }//GEN-LAST:event_MenuBotonMouseClicked
 
     private void MenuBotonCerrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MenuBotonCerrarMouseClicked
@@ -1719,6 +1720,8 @@ public class Phone extends javax.swing.JFrame {
         consultar_horario_boton.setEnabled(true);
         informacion_grado_boton1.setEnabled(true);
         consultar_matricula_boton.setEnabled(true);
+        
+        boton_asignatura.setEnabled(false);
     }//GEN-LAST:event_MenuBotonCerrarMouseClicked
 
     private void LogoutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LogoutMouseClicked
@@ -1737,23 +1740,36 @@ public class Phone extends javax.swing.JFrame {
     private void Inicio_ImagenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Inicio_ImagenMouseClicked
         seleccion.setVisible(true);
         MenuAlumno.setVisible(false);
+        
         consultar_notas.setVisible(false);
         consultar_matricula.setVisible(false);
         consultar_abonare.setVisible(false);
         consultar_grupo_grande.setVisible(false);
         consultar_grupo_practica.setVisible(false);
         consultar_horario.setVisible(false);
+        
+        consultar_notas_boton.setEnabled(true);
+        consultar_horario_boton.setEnabled(true);
+        informacion_grado_boton1.setEnabled(true);
+        consultar_matricula_boton.setEnabled(true);
     }//GEN-LAST:event_Inicio_ImagenMouseClicked
 
     private void InicioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_InicioMouseClicked
         seleccion.setVisible(true);
+        
         MenuAlumno.setVisible(false);
+        
         consultar_notas.setVisible(false);
         consultar_matricula.setVisible(false);
         consultar_abonare.setVisible(false);
         consultar_grupo_grande.setVisible(false);
         consultar_grupo_practica.setVisible(false);
         consultar_horario.setVisible(false);
+        
+        consultar_notas_boton.setEnabled(true);
+        consultar_horario_boton.setEnabled(true);
+        informacion_grado_boton1.setEnabled(true);
+        consultar_matricula_boton.setEnabled(true);
     }//GEN-LAST:event_InicioMouseClicked
 
     private void consultar_notas_botonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consultar_notas_botonActionPerformed
@@ -1997,6 +2013,8 @@ public class Phone extends javax.swing.JFrame {
         // TODO add your handling code here:
         seleccion.setVisible(false);
         consultar_horario.setVisible(true);
+        
+        boton_asignatura.setEnabled(true);
     }//GEN-LAST:event_consultar_horario_botonActionPerformed
 
     private void informacion_grado_boton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_informacion_grado_boton1ActionPerformed
