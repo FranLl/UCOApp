@@ -351,6 +351,7 @@ public class Phone extends javax.swing.JFrame {
         Usuario_campo.setText(bundle.getString("Phone.Usuario_campo.text")); // NOI18N
         Usuario_campo.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(0, 102, 255)));
         Usuario_campo.setName("Usuario_campo"); // NOI18N
+        Usuario_campo.setSelectionColor(new java.awt.Color(164, 30, 52));
         Usuario_campo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Usuario_campoActionPerformed(evt);
@@ -392,10 +393,14 @@ public class Phone extends javax.swing.JFrame {
             }
         });
 
-        jSeparator2.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 0, 0, 0, new java.awt.Color(0, 125, 255)));
+        jSeparator2.setBackground(new java.awt.Color(164, 30, 52));
+        jSeparator2.setForeground(new java.awt.Color(164, 30, 52));
+        jSeparator2.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 0, 0, 0, new java.awt.Color(164, 30, 52)));
         jSeparator2.setName("jSeparator2"); // NOI18N
 
-        jSeparator1.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 0, 0, 0, new java.awt.Color(0, 125, 255)));
+        jSeparator1.setBackground(new java.awt.Color(164, 30, 52));
+        jSeparator1.setForeground(new java.awt.Color(164, 30, 52));
+        jSeparator1.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 0, 0, 0, new java.awt.Color(164, 30, 52)));
         jSeparator1.setName("jSeparator1"); // NOI18N
 
         Selecione_idioma1.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
@@ -631,7 +636,7 @@ public class Phone extends javax.swing.JFrame {
 
         interfaz_alumno.add(MenuAlumno, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 850));
 
-        Header.setBackground(new java.awt.Color(53, 53, 255));
+        Header.setBackground(new java.awt.Color(164, 30, 52));
         Header.setName("Header"); // NOI18N
 
         MenuBoton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/menu-button.png"))); // NOI18N
@@ -1359,7 +1364,7 @@ public class Phone extends javax.swing.JFrame {
 
         interfaz_profesor.add(menu_profesor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 280, 850));
 
-        cabecera_profesor.setBackground(new java.awt.Color(53, 53, 255));
+        cabecera_profesor.setBackground(new java.awt.Color(164, 30, 52));
         cabecera_profesor.setName("cabecera_profesor"); // NOI18N
 
         MenuBoton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/menu-button.png"))); // NOI18N

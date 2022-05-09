@@ -352,6 +352,9 @@
                           </Border>
                         </Property>
                         <Property name="name" type="java.lang.String" value="Usuario_campo" noResource="true"/>
+                        <Property name="selectionColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="34" green="1e" red="a4" type="rgb"/>
+                        </Property>
                       </Properties>
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Usuario_campoActionPerformed"/>
@@ -438,24 +441,28 @@
                     </Component>
                     <Component class="javax.swing.JSeparator" name="jSeparator2">
                       <Properties>
-                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                          <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-                            <MatteColorBorder bottom="0" left="0" right="0" top="2">
-                              <Color PropertyName="color" blue="ff" green="7d" red="0" type="rgb"/>
-                            </MatteColorBorder>
-                          </Border>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="34" green="1e" red="a4" type="rgb"/>
+                        </Property>
+                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="34" green="1e" red="a4" type="rgb"/>
+                        </Property>
+                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="javax.swing.BorderFactory.createMatteBorder(2, 0, 0, 0, new java.awt.Color(164, 30, 52))" type="code"/>
                         </Property>
                         <Property name="name" type="java.lang.String" value="jSeparator2" noResource="true"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JSeparator" name="jSeparator1">
                       <Properties>
-                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                          <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-                            <MatteColorBorder bottom="0" left="0" right="0" top="2">
-                              <Color PropertyName="color" blue="ff" green="7d" red="0" type="rgb"/>
-                            </MatteColorBorder>
-                          </Border>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="34" green="1e" red="a4" type="rgb"/>
+                        </Property>
+                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="34" green="1e" red="a4" type="rgb"/>
+                        </Property>
+                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="javax.swing.BorderFactory.createMatteBorder(2, 0, 0, 0, new java.awt.Color(164, 30, 52))" type="code"/>
                         </Property>
                         <Property name="name" type="java.lang.String" value="jSeparator1" noResource="true"/>
                       </Properties>
@@ -737,7 +744,7 @@
                     <Container class="javax.swing.JPanel" name="Header">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="ff" green="35" red="35" type="rgb"/>
+                          <Color blue="34" green="1e" red="a4" type="rgb"/>
                         </Property>
                         <Property name="name" type="java.lang.String" value="Header" noResource="true"/>
                       </Properties>
@@ -2461,7 +2468,7 @@
                     <Container class="javax.swing.JPanel" name="cabecera_profesor">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="ff" green="35" red="35" type="rgb"/>
+                          <Color blue="34" green="1e" red="a4" type="rgb"/>
                         </Property>
                         <Property name="name" type="java.lang.String" value="cabecera_profesor" noResource="true"/>
                       </Properties>
